@@ -28,7 +28,7 @@ Every release is signed with one offline Ed25519 key. Its public key is compiled
 Thg9nhwwvqoKG4yOqiZM/PBeqT5LcrFFa7cKAHuqYxk=
 ```
 
-Cross-check this string against `desktop/lib/releasekey.js` in the repository and any independent channel where the project publishes it.
+Cross-check this string against `desktop/lib/releasekey.js` in the repository and independent project channels (such as [@No1dSwap on X](https://x.com/No1dSwap)).
 
 ---
 

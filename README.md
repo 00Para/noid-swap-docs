@@ -49,6 +49,7 @@ A hash-time-locked contract on each chain holds the coins. Neither contract has 
 ## Official Links & Pinned Identifiers
 
 * **Source repository:** [github.com/00Para/noid-swap](https://github.com/00Para/noid-swap)
+* **Updates on X:** [@No1dSwap](https://x.com/No1dSwap)
 * **Mainnet Ethereum contract (`HTLCPoseidonV2`):** `0x4e364cC86EdBF307CC6F336F3a72e1a24d284D70`
 * **Pinned contract code hash:** `0xf510d2a368c730339fa7cf5e023bcf2429d5732793f043e03025780bb7043ff3`
 * **Pinned Ed25519 release public key:** `Thg9nhwwvqoKG4yOqiZM/PBeqT5LcrFFa7cKAHuqYxk=`
