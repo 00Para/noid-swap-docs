@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050908">
+<title>Local Security &amp; Privacy - No1d Swap Docs</title>
+<meta name="description" content="Understanding what No1d Swap protects on your computer—and what it cannot protect against—helps you keep your setup clean and safe.">
+<link rel="canonical" href="https://00para.github.io/noid-swap-docs/security/privacy-and-local-security/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/SpaceGrotesk-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../../" aria-label="No1d Swap Docs, home"><svg class="mark" viewBox="0 0 200 200" width="24" height="24" aria-hidden="true" focusable="false"><path d="M105.16 26.18 A74 74 0 1 1 27.12 87.15" fill="none" stroke="#9fe870" stroke-width="24" stroke-linecap="round"/><path d="M135.32 81.22 A40 40 0 0 1 78.80 133.92" fill="none" stroke="#93a8ff" stroke-width="22" stroke-linecap="round"/><rect x="90" y="90" width="20" height="20" rx="2.6" transform="rotate(45 100 100)" fill="#e6edea"/></svg><span class="brand-name">No1d Swap</span><span class="brand-docs">Docs</span></a>
+    <div class="top-actions">
+      <button type="button" class="search-btn" data-search hidden aria-label="Search the docs"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="7.2" cy="7.2" r="4.6"/><path d="m10.6 10.6 3.2 3.2"/></svg><span class="search-label">Search</span><kbd>/</kbd></button>
+      <a class="top-link" href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">GitHub</a>
+      <a class="top-link" href="https://x.com/No1dSwap" rel="noopener noreferrer">X</a>
+      <a class="menu-btn" href="#site-nav" aria-controls="site-nav" aria-expanded="false"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2.5 4.5h11"/><path d="M2.5 8h11"/><path d="M2.5 11.5h11"/></svg><span>Menu</span></a>
+    </div>
+  </div>
+</header>
+<div class="shell">
+<nav id="site-nav" class="sidenav" aria-label="Documentation">
+  <div class="sidenav-bar"><a class="sidenav-close" href="#main"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="m3.5 3.5 9 9"/><path d="m12.5 3.5-9 9"/></svg><span>Close menu</span></a></div>
+  <div class="nav-group"><p class="nav-sec" id="nav-sec-0">Overview</p><ul aria-labelledby="nav-sec-0"><li><a href="../../">Welcome to No1d Swap</a></li><li><a href="../../before-you-start/is-this-right-for-you/">Is No1d Swap Right for You Today?</a></li><li><a href="../../before-you-start/how-it-works/">How It Works</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-1">Getting Started</p><ul aria-labelledby="nav-sec-1"><li><a href="../../getting-started/install-and-verify/">Download &amp; Verify the Installer</a></li><li><a href="../../getting-started/first-launch-and-recovery/">First Launch, Recovery Code &amp; Node Setup</a></li><li><a href="../../getting-started/practice-swap/">Try a 5-Minute Practice Swap</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-2">Running a Real Swap</p><ul aria-labelledby="nav-sec-2"><li><a href="../../swap-guide/overview-and-checklist/">Swap Overview &amp; Two-Person Checklist</a></li><li><a href="../../swap-guide/alice-selling-noid/">Guide for Alice (Selling NOID)</a></li><li><a href="../../swap-guide/bob-selling-eth/">Guide for Bob (Selling ETH)</a></li><li><a href="../../swap-guide/caps-fees-and-timelines/">Caps, Fees &amp; Timelines</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-3">Safety, Security &amp; Verification</p><ul aria-labelledby="nav-sec-3"><li><a href="../../security/limits-and-risks/">Limits &amp; Risks</a></li><li><a href="../../security/verify-the-contracts/">Verify the Smart Contracts</a></li><li><a href="../../security/privacy-and-local-security/" aria-current="page">Local Security &amp; Privacy</a></li><li><a href="../../security/track-record/">Live Track Record</a></li><li><a href="../../security/for-auditors/">For Auditors &amp; Cryptographers</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-4">Troubleshooting &amp; Recovery</p><ul aria-labelledby="nav-sec-4"><li><a href="../../troubleshooting/common-issues/">&quot;Something Needs a Look&quot; Playbook</a></li><li><a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-5">Reference</p><ul aria-labelledby="nav-sec-5"><li><a href="../../reference/faq/">Frequently Asked Questions</a></li><li><a href="../../reference/glossary/">Glossary</a></li></ul></div>
+  <div class="nav-group nav-ext"><p class="nav-sec" id="nav-sec-ext">Project</p><ul aria-labelledby="nav-sec-ext">
+    <li><a href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">Source on GitHub</a></li>
+    <li><a href="https://x.com/No1dSwap" rel="noopener noreferrer">Updates on X</a></li>
+  </ul></div>
+</nav>
+<main id="main" class="main" tabindex="-1">
+  <article class="prose">
+<h1 id="local-security-privacy">Local Security &amp; Privacy</h1>
+<p class="lead">Understanding what No1d Swap protects on your computer—and what it <em>cannot</em> protect against—helps you keep your setup clean and safe.</p>
+<h2 id="how-your-secrets-are-stored">How Your Secrets Are Stored<a class="anchor" href="#how-your-secrets-are-stored" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<ol>
+<li><strong>Per-swap isolated wallets:</strong> For every new swap, No1d Swap creates a brand-new temporary Parano1d wallet and a brand-new temporary Ethereum key. You never enter your main wallet's seed phrase or private key into No1d Swap.</li>
+<li><strong>OS key store vault:</strong> Swap secrets and temporary keys are sealed with AES-256-GCM using keys protected by your operating system's native key store (macOS Keychain / Windows DPAPI via Electron <code>safeStorage</code>).</li>
+<li><strong>Dedicated secret window:</strong> Your paper recovery code is shown inside an isolated, hardened window served over a private <code>no1d://secret/</code> scheme with strict Content Security Policy and zero external network access.</li>
+<li><strong>No secrets on command lines or in logs:</strong> Passphrases and private keys are passed over stdin pipes or memory—never via command-line arguments where other processes could read them.</li>
+</ol>
+<h3 id="what-the-os-key-store-protectsand-what-it-doesnt">What the OS Key Store Protects—and What It Doesn't<a class="anchor" href="#what-the-os-key-store-protectsand-what-it-doesnt" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<div class="table-wrap"><table role="table">
+<thead>
+<tr role="row">
+<th role="columnheader" scope="col">Threat</th>
+<th role="columnheader" scope="col">Protected?</th>
+<th role="columnheader" scope="col">Why</th>
+</tr>
+</thead>
+<tbody>
+<tr role="row">
+<td role="cell" data-label="Threat"><strong>Another user account on the same PC</strong></td>
+<td role="cell" data-label="Protected?">Yes</td>
+<td role="cell" data-label="Why">Data folders are owner-only (<code>0700</code> on macOS, owner/SYSTEM/Administrators ACL on Windows) and key store entries are per-user.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Threat"><strong>A stolen hard drive or copied run folder</strong></td>
+<td role="cell" data-label="Protected?">Yes</td>
+<td role="cell" data-label="Why">Sealed files (<code>*.swap.json</code>, <code>payout-history.sealed</code>) cannot be opened without your OS key store or paper recovery code.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Threat"><strong>Clipboard typos / swapped payout addresses</strong></td>
+<td role="cell" data-label="Protected?">Mitigated</td>
+<td role="cell" data-label="Why">Addresses are shown in full, read back after copying, and cross-checked against your sealed payout-address history.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Threat"><strong>Malware running as your own user account</strong></td>
+<td role="cell" data-label="Protected?"><strong>No</strong></td>
+<td role="cell" data-label="Why">Any malicious program running under your login can read your OS key store, modify local files, or forge address history—just as it can attack any desktop wallet.</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="hint hint-warning" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 2.2 14.2 13H1.8L8 2.2Z"/><path d="M8 6.6v3"/><path d="M8 11.4v.1"/></svg></span><div class="hint-body"><span class="sr-only">Warning: </span><p><strong>Keep your paper recovery code separate from your run folders.</strong> Anyone who obtains <em>both</em> your recovery code and a swap's run folder can derive that swap's passphrase offline.</p>
+</div></aside>
+<h2 id="desktop-hardening-built-into-the-app">Desktop Hardening Built Into the App<a class="anchor" href="#desktop-hardening-built-into-the-app" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>The desktop shell enforces strict Electron security controls on every launch:</p>
+<ul>
+<li><strong>Electron fuses</strong> enabled at build time; remote debugging, proxy, and host-resolver CLI switches are refused at startup.</li>
+<li><strong>Runtime manifest integrity check:</strong> On every packaged launch, the app verifies its own runtime manifest; a tampered installation stops with <code>&quot;This installation is damaged: reinstall it.&quot;</code></li>
+<li><strong>Direct proxy &amp; WebRTC hardening:</strong> Every session sets <code>proxy: direct</code> and <code>disable_non_proxied_udp</code>.</li>
+<li><strong>Single-instance lock &amp; run locks:</strong> Prevents two windows from racing over the same swap files.</li>
+<li><strong>Owner-only data folder enforcement:</strong> Verifies folder permissions before opening the vault.</li>
+</ul>
+<h2 id="privacy-what-is-public-vs-private">Privacy: What Is Public vs. Private<a class="anchor" href="#privacy-what-is-public-vs-private" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<h3 id="what-stays-private-on-your-computer">What Stays Private on Your Computer<a class="anchor" href="#what-stays-private-on-your-computer" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<ul>
+<li>Your recovery code and vault secret</li>
+<li>Your temporary swap wallet keys</li>
+<li>Your swap secret <code>s</code> (private to Alice until the moment she claims <span class="coin coin-eth">ETH</span> on Ethereum)</li>
+<li>Your payout address history (<code>payout-history.sealed</code>)</li>
+</ul>
+<h3 id="what-is-public-on-chain-or-shared-with-counterparty">What Is Public (On-Chain or Shared With Counterparty)<a class="anchor" href="#what-is-public-on-chain-or-shared-with-counterparty" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<ul>
+<li><strong>Between Alice and Bob:</strong> Amounts, network, contract address, your swap payout addresses, and the hashlock <code>A = Addr(s)</code>.</li>
+<li><strong>On-chain linkability:</strong> Both Ethereum (<code>HTLCPoseidonV2</code>) and Parano1d (<code>htlc.pruv</code>) record <code>A = Addr(s)</code>. Anyone inspecting both blockchains can link the Ethereum lock and the Parano1d lock for the same swap—including swaps that end in a refund.</li>
+<li><strong>RPC metadata:</strong> Your Ethereum RPC endpoints see your IP address and Ethereum queries/broadcasts. Parano1d queries stay local on <code>127.0.0.1:9601</code> (talking to your own synced Parano1d node).</li>
+<li><strong>Update check:</strong> Fetches <code>release.json</code> and <code>release.json.sig</code> from GitHub with no cookies, no auth token, and a generic user agent.</li>
+</ul>
+<h2 id="computer-awake-power-caveats">Computer Awake &amp; Power Caveats<a class="anchor" href="#computer-awake-power-caveats" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<ul>
+<li>No1d Swap holds an OS wake lock while coins are locked in a contract, and relaunches cleanly after unexpected crashes.</li>
+<li><strong>macOS laptop lid caveat:</strong> Closing a MacBook lid on battery power can still force sleep even with an active wake lock. Keep laptops plugged in with the lid open until the swap reaches <strong>Done</strong>.</li>
+<li><strong>Windows power cuts:</strong> Swap files are written before any transaction is broadcast (protecting against app crashes), but sudden power loss on Windows can still drop unflushed folder metadata.</li>
+</ul>
+
+  </article>
+  <nav class="pager" aria-label="Previous and next page"><a class="pager-prev" href="../../security/verify-the-contracts/" rel="prev"><span class="pager-dir">Previous</span><span class="pager-title">Verify the Smart Contracts</span></a><a class="pager-next" href="../../security/track-record/" rel="next"><span class="pager-dir">Next</span><span class="pager-title">Live Track Record</span></a></nav>
+  <footer class="foot">
+    <p>These pages load nothing from other sites: no analytics, no web-font service, no scripts from elsewhere. The fonts are Space Grotesk and JetBrains Mono under the SIL Open Font License (<a href="../../assets/fonts/SpaceGrotesk-OFL.txt">Space Grotesk</a>, <a href="../../assets/fonts/JetBrainsMono-OFL.txt">JetBrains Mono</a>).</p>
+  </footer>
+</main>
+<aside class="outline" aria-label="On this page"><p class="outline-title">On this page</p><ul><li class="ol-l2"><a href="#how-your-secrets-are-stored">How Your Secrets Are Stored</a></li><li class="ol-l3"><a href="#what-the-os-key-store-protectsand-what-it-doesnt">What the OS Key Store Protects—and What It Doesn't</a></li><li class="ol-l2"><a href="#desktop-hardening-built-into-the-app">Desktop Hardening Built Into the App</a></li><li class="ol-l2"><a href="#privacy-what-is-public-vs-private">Privacy: What Is Public vs. Private</a></li><li class="ol-l3"><a href="#what-stays-private-on-your-computer">What Stays Private on Your Computer</a></li><li class="ol-l3"><a href="#what-is-public-on-chain-or-shared-with-counterparty">What Is Public (On-Chain or Shared With Counterparty)</a></li><li class="ol-l2"><a href="#computer-awake-power-caveats">Computer Awake &amp; Power Caveats</a></li></ul></aside>
+</div>
+</body>
+</html>

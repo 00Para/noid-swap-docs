@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050908">
+<title>Emergency Recovery &amp; Second-Computer Close - No1d Swap Docs</title>
+<meta name="description" content="Even if the desktop app crashes, refuses to open, or gets uninstalled mid-swap, your coins are never trapped inside the UI. Everything lives in standard swap files inside your...">
+<link rel="canonical" href="https://00para.github.io/noid-swap-docs/troubleshooting/recovery-and-second-computer/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/SpaceGrotesk-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../../" aria-label="No1d Swap Docs, home"><svg class="mark" viewBox="0 0 200 200" width="24" height="24" aria-hidden="true" focusable="false"><path d="M105.16 26.18 A74 74 0 1 1 27.12 87.15" fill="none" stroke="#9fe870" stroke-width="24" stroke-linecap="round"/><path d="M135.32 81.22 A40 40 0 0 1 78.80 133.92" fill="none" stroke="#93a8ff" stroke-width="22" stroke-linecap="round"/><rect x="90" y="90" width="20" height="20" rx="2.6" transform="rotate(45 100 100)" fill="#e6edea"/></svg><span class="brand-name">No1d Swap</span><span class="brand-docs">Docs</span></a>
+    <div class="top-actions">
+      <button type="button" class="search-btn" data-search hidden aria-label="Search the docs"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="7.2" cy="7.2" r="4.6"/><path d="m10.6 10.6 3.2 3.2"/></svg><span class="search-label">Search</span><kbd>/</kbd></button>
+      <a class="top-link" href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">GitHub</a>
+      <a class="top-link" href="https://x.com/No1dSwap" rel="noopener noreferrer">X</a>
+      <a class="menu-btn" href="#site-nav" aria-controls="site-nav" aria-expanded="false"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2.5 4.5h11"/><path d="M2.5 8h11"/><path d="M2.5 11.5h11"/></svg><span>Menu</span></a>
+    </div>
+  </div>
+</header>
+<div class="shell">
+<nav id="site-nav" class="sidenav" aria-label="Documentation">
+  <div class="sidenav-bar"><a class="sidenav-close" href="#main"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="m3.5 3.5 9 9"/><path d="m12.5 3.5-9 9"/></svg><span>Close menu</span></a></div>
+  <div class="nav-group"><p class="nav-sec" id="nav-sec-0">Overview</p><ul aria-labelledby="nav-sec-0"><li><a href="../../">Welcome to No1d Swap</a></li><li><a href="../../before-you-start/is-this-right-for-you/">Is No1d Swap Right for You Today?</a></li><li><a href="../../before-you-start/how-it-works/">How It Works</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-1">Getting Started</p><ul aria-labelledby="nav-sec-1"><li><a href="../../getting-started/install-and-verify/">Download &amp; Verify the Installer</a></li><li><a href="../../getting-started/first-launch-and-recovery/">First Launch, Recovery Code &amp; Node Setup</a></li><li><a href="../../getting-started/practice-swap/">Try a 5-Minute Practice Swap</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-2">Running a Real Swap</p><ul aria-labelledby="nav-sec-2"><li><a href="../../swap-guide/overview-and-checklist/">Swap Overview &amp; Two-Person Checklist</a></li><li><a href="../../swap-guide/alice-selling-noid/">Guide for Alice (Selling NOID)</a></li><li><a href="../../swap-guide/bob-selling-eth/">Guide for Bob (Selling ETH)</a></li><li><a href="../../swap-guide/caps-fees-and-timelines/">Caps, Fees &amp; Timelines</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-3">Safety, Security &amp; Verification</p><ul aria-labelledby="nav-sec-3"><li><a href="../../security/limits-and-risks/">Limits &amp; Risks</a></li><li><a href="../../security/verify-the-contracts/">Verify the Smart Contracts</a></li><li><a href="../../security/privacy-and-local-security/">Local Security &amp; Privacy</a></li><li><a href="../../security/track-record/">Live Track Record</a></li><li><a href="../../security/for-auditors/">For Auditors &amp; Cryptographers</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-4">Troubleshooting &amp; Recovery</p><ul aria-labelledby="nav-sec-4"><li><a href="../../troubleshooting/common-issues/">&quot;Something Needs a Look&quot; Playbook</a></li><li><a href="../../troubleshooting/recovery-and-second-computer/" aria-current="page">Emergency Recovery &amp; Second-Computer Close</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-5">Reference</p><ul aria-labelledby="nav-sec-5"><li><a href="../../reference/faq/">Frequently Asked Questions</a></li><li><a href="../../reference/glossary/">Glossary</a></li></ul></div>
+  <div class="nav-group nav-ext"><p class="nav-sec" id="nav-sec-ext">Project</p><ul aria-labelledby="nav-sec-ext">
+    <li><a href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">Source on GitHub</a></li>
+    <li><a href="https://x.com/No1dSwap" rel="noopener noreferrer">Updates on X</a></li>
+  </ul></div>
+</nav>
+<main id="main" class="main" tabindex="-1">
+  <article class="prose">
+<h1 id="emergency-recovery-second-computer-close">Emergency Recovery &amp; Second-Computer Close</h1>
+<p class="lead">Even if the desktop app crashes, refuses to open, or gets uninstalled mid-swap, <strong>your coins are never trapped inside the UI.</strong> Everything lives in standard swap files inside your data folder and can be finished with <code>swap-cli</code> alone.</p>
+<h2 id="part-1-open-a-swap-by-hand-with-your-recovery-code">Part 1: Open a Swap by Hand (With Your Recovery Code)<a class="anchor" href="#part-1-open-a-swap-by-hand-with-your-recovery-code" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>Use this procedure if the No1d Swap desktop app will not start and you need to finish a refund, claim, or sweep directly with <code>swap-cli</code>.</p>
+<h3 id="what-you-need">What You Need<a class="anchor" href="#what-you-need" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<ol>
+<li>Your <strong>paper recovery code</strong> (shown on first launch).</li>
+<li>The swap's complete <strong>run folder</strong> (<code>runs/&lt;swap-id&gt;/</code>):
+<ul>
+<li><strong>macOS:</strong> <code>~/Library/Application Support/No1d Swap/runs/&lt;swap-id&gt;</code></li>
+<li><strong>Windows:</strong> <code>%LOCALAPPDATA%\No1d Swap\runs\&lt;swap-id&gt;</code>
+<em>(Uninstalling No1d Swap never deletes this folder.)</em></li>
+</ul>
+</li>
+<li><strong><code>swap-cli</code>:</strong> either the copy shipped inside the app (<code>No1d Swap.app/Contents/Resources/bin/swap-cli</code> on macOS, <code>resources\bin\swap-cli.exe</code> on Windows) or built from source.</li>
+<li>A copy of the public repository (<code>00Para/noid-swap</code>) and <strong>Node.js 22+</strong>.</li>
+</ol>
+<h3 id="derive-the-swap-passphrase-safely">Derive the Swap Passphrase Safely<a class="anchor" href="#derive-the-swap-passphrase-safely" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<p>Run in <strong>Terminal</strong> (macOS) or <strong>Git Bash</strong> (Windows):</p>
+<figure class="code"><pre tabindex="0"><code class="language-sh">REPO=/path/to/noid-swap
+RUN=&quot;/path/to/runs/&lt;swap-id&gt;&quot;
+
+export SWAP_PASSPHRASE=&quot;$(node &quot;$REPO/desktop/tools/recovery.js&quot; passphrase &quot;$RUN&quot;)&quot;
+# Type your paper recovery code, then press Enter and Ctrl+D
+# (In a native Windows console window: Ctrl+Z, then Enter)</code></pre></figure>
+<aside class="hint hint-info" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6"/><path d="M8 5.1v.1"/></svg></span><div class="hint-body"><span class="sr-only">Note: </span><p><strong>Why stdin?</strong> <code>recovery.js</code> only reads your recovery code from standard input—never from a command-line argument—so it stays out of your shell history and process list. It also checks <code>vault-check.json</code> to make sure the code matches that run folder.</p>
+</div></aside>
+<p>Once <code>SWAP_PASSPHRASE</code> is exported in that shell, every <code>swap-cli</code> command for that swap unlocks its files automatically (see <code>swap-cli/README.md</code> for wallet and key commands). <strong>Close the terminal window when finished</strong> so <code>SWAP_PASSPHRASE</code> is cleared from memory.</p>
+<h2 id="part-2-cancel-a-never-sent-intent">Part 2: Cancel a Never-Sent Intent<a class="anchor" href="#part-2-cancel-a-never-sent-intent" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>If the app warns that a swap prepared a funding or lock that was never sent and cannot end on its own:</p>
+<ol>
+<li><strong>First verify on-chain</strong> (in your Parano1d wallet app, or on Etherscan/Sepolia) that <strong>no funding or lock transaction</strong> for this swap was actually broadcast.</li>
+<li>Open the swap in a terminal using <strong>Part 1</strong> above so <code>SWAP_PASSPHRASE</code> is set.</li>
+<li>Run the explicit cancellation command with the same node flags your swap uses:</li>
+</ol>
+<figure class="code"><pre tabindex="0"><code class="language-sh"># For Alice:
+swap-cli intent &quot;$RUN/alice.swap.json&quot; --cancel --i-checked-the-wallet &lt;NODE_OPTIONS&gt;
+
+# For Bob:
+swap-cli intent &quot;$RUN/bob/bob.swap.json&quot; --cancel --i-checked-the-wallet &lt;NODE_OPTIONS&gt;</code></pre></figure>
+<ol start="4">
+<li>Reopen No1d Swap. The app reads both chains again, marks the swap ended, and sweeps any funds left in the swap wallet back to your own payout address.</li>
+</ol>
+<h2 id="part-3-close-bobs-noid-swap-from-a-second-computer">Part 3: Close Bob's NOID Swap From a Second Computer<a class="anchor" href="#part-3-close-bobs-noid-swap-from-a-second-computer" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<aside class="hint hint-success" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25"/><path d="m5.3 8.2 1.9 1.9 3.5-3.9"/></svg></span><div class="hint-body"><span class="sr-only">Good to know: </span><p><strong>Trustless rescue for Bob:</strong> Once Alice takes your <span class="coin coin-eth">ETH</span> on Ethereum, the secret <code>s</code> is public on-chain. From that moment on, <strong>anyone</strong> with the public swap files can broadcast the <span class="coin coin-noid">NOID</span> close—and the Parano1d contract forces 100% of the payout strictly to <strong>Bob's pinned Parano1d address</strong>. No <span class="coin coin-eth">ETH</span>, no <span class="coin coin-noid">NOID</span>, and no wallet key is required on the second computer (the ~0.0058 <span class="coin coin-noid">NOID</span> close fee comes out of the locked <span class="coin coin-noid">NOID</span>).</p>
+</div></aside>
+<p>Use this if you are <strong>Bob</strong>, Alice has already revealed <code>s</code>, and your main computer is off, loses internet, or cannot sync Parano1d in time before <code>D - 19</code>.</p>
+<aside class="hint hint-warning" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 2.2 14.2 13H1.8L8 2.2Z"/><path d="M8 6.6v3"/><path d="M8 11.4v.1"/></svg></span><div class="hint-body"><span class="sr-only">Warning: </span><p><strong>Shown live with the terminal tools, not yet with the desktop app.</strong> A third-party close paid Bob's address in run 19 (<code>docs/live-run-19.md</code>), using the terminal helpers of <code>scripts/live/</code>. Nobody has yet done it from a copy of a desktop app's run folder. Read <code>docs/runbook-two-party.md</code> before you need it, not during the swap.</p>
+</div></aside>
+<h3 id="what-the-second-computer-needs">What the Second Computer Needs<a class="anchor" href="#what-the-second-computer-needs" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<ol>
+<li>The project's terminal tools set up once with <code>scripts/live/setup.sh</code>.</li>
+<li>A synced Parano1d node.</li>
+<li>A copy of this swap's folder (<code>bob.swap.json</code> and Alice's public bundle <code>alice.bundle.json</code>).
+<ul>
+<li><em>Privacy note:</em> Your Ethereum swap key inside <code>bob.swap.json</code> stays sealed without your passphrase, but keep the copied folder private and delete it from the second computer once finished.</li>
+</ul>
+</li>
+</ol>
+<h3 id="steps-on-the-second-computer">Steps on the Second Computer<a class="anchor" href="#steps-on-the-second-computer" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<ol>
+<li>Run <strong>one tick</strong> to read Alice's revealed secret <code>s</code> from Ethereum.</li>
+<li>Run a dry-run of <code>claim.sh</code> and <strong>verify that the recipient address printed on screen is your own Parano1d address</strong>.</li>
+<li>Broadcast the claim:</li>
+</ol>
+<figure class="code is-line"><pre tabindex="0"><code class="language-sh">claim.sh --submit</code></pre></figure>
+<h3 id="back-on-your-main-computer">Back on Your Main Computer<a class="anchor" href="#back-on-your-main-computer" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<ol>
+<li>Reopen No1d Swap and open the swap.</li>
+<li>Until you record it, the swap will show <strong>&quot;Something needs a look&quot;</strong> (your <span class="coin coin-noid">NOID</span> is already safely in your own wallet either way).</li>
+<li>Click <strong>Record a close made elsewhere</strong>. The app verifies the close on-chain before marking the swap settled.</li>
+</ol>
+
+  </article>
+  <nav class="pager" aria-label="Previous and next page"><a class="pager-prev" href="../../troubleshooting/common-issues/" rel="prev"><span class="pager-dir">Previous</span><span class="pager-title">&quot;Something Needs a Look&quot; Playbook</span></a><a class="pager-next" href="../../reference/faq/" rel="next"><span class="pager-dir">Next</span><span class="pager-title">Frequently Asked Questions</span></a></nav>
+  <footer class="foot">
+    <p>These pages load nothing from other sites: no analytics, no web-font service, no scripts from elsewhere. The fonts are Space Grotesk and JetBrains Mono under the SIL Open Font License (<a href="../../assets/fonts/SpaceGrotesk-OFL.txt">Space Grotesk</a>, <a href="../../assets/fonts/JetBrainsMono-OFL.txt">JetBrains Mono</a>).</p>
+  </footer>
+</main>
+<aside class="outline" aria-label="On this page"><p class="outline-title">On this page</p><ul><li class="ol-l2"><a href="#part-1-open-a-swap-by-hand-with-your-recovery-code">Part 1: Open a Swap by Hand (With Your Recovery Code)</a></li><li class="ol-l3"><a href="#what-you-need">What You Need</a></li><li class="ol-l3"><a href="#derive-the-swap-passphrase-safely">Derive the Swap Passphrase Safely</a></li><li class="ol-l2"><a href="#part-2-cancel-a-never-sent-intent">Part 2: Cancel a Never-Sent Intent</a></li><li class="ol-l2"><a href="#part-3-close-bobs-noid-swap-from-a-second-computer">Part 3: Close Bob's NOID Swap From a Second Computer</a></li><li class="ol-l3"><a href="#what-the-second-computer-needs">What the Second Computer Needs</a></li><li class="ol-l3"><a href="#steps-on-the-second-computer">Steps on the Second Computer</a></li><li class="ol-l3"><a href="#back-on-your-main-computer">Back on Your Main Computer</a></li></ul></aside>
+</div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050908">
+<title>How It Works - No1d Swap Docs</title>
+<meta name="description" content="No1d Swap uses hash-time-locked contracts (HTLCs) on both Parano1d and Ethereum. You don't need to know cryptography to use the app, but understanding four core concepts makes...">
+<link rel="canonical" href="https://00para.github.io/noid-swap-docs/before-you-start/how-it-works/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/SpaceGrotesk-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../../" aria-label="No1d Swap Docs, home"><svg class="mark" viewBox="0 0 200 200" width="24" height="24" aria-hidden="true" focusable="false"><path d="M105.16 26.18 A74 74 0 1 1 27.12 87.15" fill="none" stroke="#9fe870" stroke-width="24" stroke-linecap="round"/><path d="M135.32 81.22 A40 40 0 0 1 78.80 133.92" fill="none" stroke="#93a8ff" stroke-width="22" stroke-linecap="round"/><rect x="90" y="90" width="20" height="20" rx="2.6" transform="rotate(45 100 100)" fill="#e6edea"/></svg><span class="brand-name">No1d Swap</span><span class="brand-docs">Docs</span></a>
+    <div class="top-actions">
+      <button type="button" class="search-btn" data-search hidden aria-label="Search the docs"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="7.2" cy="7.2" r="4.6"/><path d="m10.6 10.6 3.2 3.2"/></svg><span class="search-label">Search</span><kbd>/</kbd></button>
+      <a class="top-link" href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">GitHub</a>
+      <a class="top-link" href="https://x.com/No1dSwap" rel="noopener noreferrer">X</a>
+      <a class="menu-btn" href="#site-nav" aria-controls="site-nav" aria-expanded="false"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2.5 4.5h11"/><path d="M2.5 8h11"/><path d="M2.5 11.5h11"/></svg><span>Menu</span></a>
+    </div>
+  </div>
+</header>
+<div class="shell">
+<nav id="site-nav" class="sidenav" aria-label="Documentation">
+  <div class="sidenav-bar"><a class="sidenav-close" href="#main"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="m3.5 3.5 9 9"/><path d="m12.5 3.5-9 9"/></svg><span>Close menu</span></a></div>
+  <div class="nav-group"><p class="nav-sec" id="nav-sec-0">Overview</p><ul aria-labelledby="nav-sec-0"><li><a href="../../">Welcome to No1d Swap</a></li><li><a href="../../before-you-start/is-this-right-for-you/">Is No1d Swap Right for You Today?</a></li><li><a href="../../before-you-start/how-it-works/" aria-current="page">How It Works</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-1">Getting Started</p><ul aria-labelledby="nav-sec-1"><li><a href="../../getting-started/install-and-verify/">Download &amp; Verify the Installer</a></li><li><a href="../../getting-started/first-launch-and-recovery/">First Launch, Recovery Code &amp; Node Setup</a></li><li><a href="../../getting-started/practice-swap/">Try a 5-Minute Practice Swap</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-2">Running a Real Swap</p><ul aria-labelledby="nav-sec-2"><li><a href="../../swap-guide/overview-and-checklist/">Swap Overview &amp; Two-Person Checklist</a></li><li><a href="../../swap-guide/alice-selling-noid/">Guide for Alice (Selling NOID)</a></li><li><a href="../../swap-guide/bob-selling-eth/">Guide for Bob (Selling ETH)</a></li><li><a href="../../swap-guide/caps-fees-and-timelines/">Caps, Fees &amp; Timelines</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-3">Safety, Security &amp; Verification</p><ul aria-labelledby="nav-sec-3"><li><a href="../../security/limits-and-risks/">Limits &amp; Risks</a></li><li><a href="../../security/verify-the-contracts/">Verify the Smart Contracts</a></li><li><a href="../../security/privacy-and-local-security/">Local Security &amp; Privacy</a></li><li><a href="../../security/track-record/">Live Track Record</a></li><li><a href="../../security/for-auditors/">For Auditors &amp; Cryptographers</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-4">Troubleshooting &amp; Recovery</p><ul aria-labelledby="nav-sec-4"><li><a href="../../troubleshooting/common-issues/">&quot;Something Needs a Look&quot; Playbook</a></li><li><a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-5">Reference</p><ul aria-labelledby="nav-sec-5"><li><a href="../../reference/faq/">Frequently Asked Questions</a></li><li><a href="../../reference/glossary/">Glossary</a></li></ul></div>
+  <div class="nav-group nav-ext"><p class="nav-sec" id="nav-sec-ext">Project</p><ul aria-labelledby="nav-sec-ext">
+    <li><a href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">Source on GitHub</a></li>
+    <li><a href="https://x.com/No1dSwap" rel="noopener noreferrer">Updates on X</a></li>
+  </ul></div>
+</nav>
+<main id="main" class="main" tabindex="-1">
+  <article class="prose">
+<h1 id="how-it-works">How It Works</h1>
+<p class="lead">No1d Swap uses <strong>hash-time-locked contracts (HTLCs)</strong> on both Parano1d and Ethereum. You don't need to know cryptography to use the app, but understanding four core concepts makes every screen—and every safety warning—immediately obvious.</p>
+<h2 id="four-words-to-know">Four Words to Know<a class="anchor" href="#four-words-to-know" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<ul>
+<li><strong>Secret (<code>s</code>):</strong> A random 32-byte number generated on Alice's computer when the swap starts. Nobody else knows it at first.</li>
+<li><strong>Hash-time lock:</strong> A smart contract lock with exactly two ways out:
+<ol>
+<li><strong>Before the deadline:</strong> Opens for the counterparty when the secret is shown.</li>
+<li><strong>After the deadline:</strong> Returns the coins to the person who locked them.</li>
+</ol>
+</li>
+<li><strong>Reveal:</strong> The moment Alice claims Bob's <span class="coin coin-eth">ETH</span> on Ethereum by submitting the secret. Once that transaction lands on Ethereum, the secret is public—and Bob's app reads it right off the chain.</li>
+<li><strong>Deadline:</strong> A hard time or block height after which coins go back to their original owner, so funds can never stay locked forever.</li>
+</ul>
+<h2 id="the-swap-in-one-picture">The Swap in One Picture<a class="anchor" href="#the-swap-in-one-picture" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>Alice</strong> sells <span class="coin coin-noid">NOID</span>. <strong>Bob</strong> sells <span class="coin coin-eth">ETH</span>.</p>
+<figure class="diagram seq n4"><div class="seq-head" aria-hidden="true"><span class="seq-lane" title="Alice (sells NOID)">Alice</span><span class="seq-lane is-noid" title="Parano1d">Parano1d</span><span class="seq-lane is-eth" title="Ethereum">Ethereum</span><span class="seq-lane" title="Bob (sells ETH)">Bob</span></div><ol class="seq-rows"><li class="seq-row"><span class="seq-track s0" aria-hidden="true"><i class="seq-dot"></i><i class="seq-self"></i></span><p class="seq-text"><span class="sr-only">Alice, to itself: </span>Creates random secret s (kept private)</p></li><li class="seq-row"><span class="seq-track f0 a0 w1 r to-noid" aria-hidden="true"><i class="seq-dot"></i><i class="seq-line"></i></span><p class="seq-text"><span class="sr-only">Alice to Parano1d: </span>Locks NOID (claimable by Bob with s, or refunded to Alice after D)</p></li><li class="seq-row"><span class="seq-track f3 a1 w2 l to-noid" aria-hidden="true"><i class="seq-dot"></i><i class="seq-line"></i></span><p class="seq-text"><span class="sr-only">Bob to Parano1d: </span>Verifies NOID lock is final</p></li><li class="seq-row"><span class="seq-track f3 a2 w1 l to-eth" aria-hidden="true"><i class="seq-dot"></i><i class="seq-line"></i></span><p class="seq-text"><span class="sr-only">Bob to Ethereum: </span>Locks ETH (claimable by Alice with s, or refunded to Bob after T_reveal)</p></li><li class="seq-row"><span class="seq-track f0 a0 w2 r to-eth" aria-hidden="true"><i class="seq-dot"></i><i class="seq-line"></i></span><p class="seq-text"><span class="sr-only">Alice to Ethereum: </span>Claims ETH by revealing s on-chain</p></li><li class="seq-row"><span class="seq-track f3 a2 w1 l to-eth" aria-hidden="true"><i class="seq-dot"></i><i class="seq-line"></i></span><p class="seq-text"><span class="sr-only">Bob to Ethereum: </span>Reads s from Ethereum Claimed event</p></li><li class="seq-row"><span class="seq-track f3 a1 w2 l to-noid" aria-hidden="true"><i class="seq-dot"></i><i class="seq-line"></i></span><p class="seq-text"><span class="sr-only">Bob to Parano1d: </span>Claims NOID using s (before D - 19 blocks)</p></li></ol></figure>
+<p>Notice what <strong>never</strong> happens:</p>
+<ul>
+<li>Neither person ever holds both coins at the same time (unless Bob goes offline and misses his claim window).</li>
+<li>No bridge, relayer, custodian, or team multisig ever touches the coins.</li>
+</ul>
+<h2 id="why-the-noid-seller-always-goes-first">Why the NOID Seller Always Goes First<a class="anchor" href="#why-the-noid-seller-always-goes-first" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>On most chains, either side could lock first. On Parano1d, the order is fixed for an elegant cryptographic reason:</p>
+<ol>
+<li><strong>Parano1d uses zero-knowledge proofs, not signatures.</strong> When you spend a <span class="coin coin-noid">NOID</span> coin, you prove <em>in zero knowledge</em> that you know the secret behind its address <code>A = Addr(s)</code>—without ever putting <code>s</code> on the blockchain.</li>
+<li><strong>Because Parano1d never reveals <code>s</code>, Ethereum has to be the reveal chain.</strong> Whoever owns <code>s</code> at the start must claim on Ethereum to make <code>s</code> public.</li>
+<li><strong>And because <code>A = Addr(s)</code> is already a hashlock</strong>, the Parano1d contract (<code>htlc.pruv</code>) doesn't need extra opcodes—it compiles to a single instruction.</li>
+<li><strong>On Ethereum, <code>HTLCPoseidonV2</code> computes <code>Addr(s)</code> directly in Solidity/Yul.</strong> Both chains lock on the exact same 32-byte value <code>A</code>, so no slow off-chain zero-knowledge equivalence proof is needed for <span class="coin coin-eth">ETH</span> swaps.</li>
+</ol>
+<p>That single design choice locks in the entire sequence:</p>
+<ul>
+<li><strong>Alice (<span class="coin coin-noid">NOID</span> seller)</strong> creates the secret, locks <span class="coin coin-noid">NOID</span> <strong>first</strong> with the <strong>longer</strong> deadline, and reveals <code>s</code> on Ethereum.</li>
+<li><strong>Bob (<span class="coin coin-eth">ETH</span> seller)</strong> locks <span class="coin coin-eth">ETH</span> <strong>second</strong> with the <strong>shorter</strong> deadline, reads <code>s</code> from Alice's Ethereum claim, and claims <span class="coin coin-noid">NOID</span> <strong>last</strong>.</li>
+</ul>
+<h2 id="why-the-deadlines-are-staggered">Why the Deadlines Are Staggered<a class="anchor" href="#why-the-deadlines-are-staggered" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>The two deadlines are deliberately unequal so both sides stay safe when everything stops mid-swap:</p>
+<figure class="diagram chain"><ol class="chain-list"><li class="chain-item"><span class="chain-main">Alice presses Prepare</span> <span class="chain-note">(t = 0)</span></li><li class="chain-item"><span class="chain-main">Alice funds NOID lock</span></li><li class="chain-item"><span class="chain-main">Bob locks ETH</span> <span class="chain-note">(~15-20 min)</span></li><li class="chain-item"><span class="chain-main">Alice reveals s &amp; gets ETH</span> <span class="chain-note">(cutoff: 30 min before T_reveal)</span></li><li class="chain-item"><span class="chain-main">Bob claims NOID</span> <span class="chain-note">(at least ~75 min window)</span></li><li class="chain-item alt"><span class="chain-main">ETH refund opens</span> <span class="chain-note">(T_reveal: ~2h 20m after Bob's lock)</span></li><li class="chain-item alt"><span class="chain-main">NOID refund opens</span> <span class="chain-note">(D: ~6h 45m after Prepare)</span></li></ol></figure>
+<ul>
+<li><strong>Ethereum's deadline (<code>T_reveal</code>) always expires well before Parano1d's deadline (<code>D</code>).</strong>
+<ul>
+<li>If Alice vanishes after Bob locks <span class="coin coin-eth">ETH</span>, Bob gets his <span class="coin coin-eth">ETH</span> back (~2 h 20 min after his lock) without Alice ever learning a way to steal it.</li>
+<li>If Alice reveals near the end of her window, her app <strong>refuses to reveal in the final 30 minutes</strong>—preventing a dangerous race where she publishes <code>s</code> right as Bob's refund activates.</li>
+<li>Whenever Alice <em>does</em> reveal in time, Bob is guaranteed <strong>at least ~75 minutes</strong> to claim his <span class="coin coin-noid">NOID</span> and wait for Parano1d finality (19 blocks) before Alice's <span class="coin coin-noid">NOID</span> refund opens.</li>
+</ul>
+</li>
+</ul>
+<h2 id="what-happens-if-something-goes-wrong">What Happens If Something Goes Wrong?<a class="anchor" href="#what-happens-if-something-goes-wrong" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<div class="table-wrap"><table role="table">
+<thead>
+<tr role="row">
+<th role="columnheader" scope="col">Scenario</th>
+<th role="columnheader" scope="col">Outcome for Alice (<span class="coin coin-noid">NOID</span>)</th>
+<th role="columnheader" scope="col">Outcome for Bob (<span class="coin coin-eth">ETH</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr role="row">
+<td role="cell" data-label="Scenario"><strong>Either person stops before locking</strong></td>
+<td role="cell" data-label="Outcome for Alice ()">If Alice didn't fund yet, nothing moved. If she funded, <span class="coin coin-noid">NOID</span> returns after ~6 h 45 min (minus fees).</td>
+<td role="cell" data-label="Outcome for Bob ()">Nothing locked; loses nothing.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Scenario"><strong>Bob never locks <span class="coin coin-eth">ETH</span></strong></td>
+<td role="cell" data-label="Outcome for Alice ()"><span class="coin coin-noid">NOID</span> unlocks back to Alice after ~6 h 45 min (minus fees).</td>
+<td role="cell" data-label="Outcome for Bob ()">Nothing locked; loses nothing.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Scenario"><strong>Alice never reveals <code>s</code></strong></td>
+<td role="cell" data-label="Outcome for Alice ()"><span class="coin coin-noid">NOID</span> unlocks back to Alice after ~6 h 45 min (minus fees).</td>
+<td role="cell" data-label="Outcome for Bob ()"><span class="coin coin-eth">ETH</span> refunds to Bob after ~2 h 20 min (minus gas).</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Scenario"><strong>Alice tries to reveal too late</strong></td>
+<td role="cell" data-label="Outcome for Alice ()">App refuses in the last 30 min before <code>T_reveal</code> → safely becomes &quot;Alice never reveals.&quot;</td>
+<td role="cell" data-label="Outcome for Bob ()"><span class="coin coin-eth">ETH</span> refunds to Bob after ~2 h 20 min.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Scenario"><strong>Bob is offline &gt; 75 min after Alice reveals</strong></td>
+<td role="cell" data-label="Outcome for Alice ()">Alice keeps the <span class="coin coin-eth">ETH</span> <strong>and</strong> can reclaim the <span class="coin coin-noid">NOID</span> after <code>D</code>.</td>
+<td role="cell" data-label="Outcome for Bob ()"><strong>Bob loses the <span class="coin coin-eth">ETH</span>.</strong> Stay online after locking!</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="hint hint-success" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25"/><path d="m5.3 8.2 1.9 1.9 3.5-3.9"/></svg></span><div class="hint-body"><span class="sr-only">Good to know: </span><p><strong>Good to know for Bob:</strong> Once Alice reveals <code>s</code> on Ethereum, <em>anyone</em> who has the public swap files can broadcast Bob's <span class="coin coin-noid">NOID</span> claim—and the contract forces the payout to go <strong>only to Bob's address</strong>. See <a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a> if your main computer ever loses power or internet mid-swap.</p>
+</div></aside>
+
+  </article>
+  <nav class="pager" aria-label="Previous and next page"><a class="pager-prev" href="../../before-you-start/is-this-right-for-you/" rel="prev"><span class="pager-dir">Previous</span><span class="pager-title">Is No1d Swap Right for You Today?</span></a><a class="pager-next" href="../../getting-started/install-and-verify/" rel="next"><span class="pager-dir">Next</span><span class="pager-title">Download &amp; Verify the Installer</span></a></nav>
+  <footer class="foot">
+    <p>These pages load nothing from other sites: no analytics, no web-font service, no scripts from elsewhere. The fonts are Space Grotesk and JetBrains Mono under the SIL Open Font License (<a href="../../assets/fonts/SpaceGrotesk-OFL.txt">Space Grotesk</a>, <a href="../../assets/fonts/JetBrainsMono-OFL.txt">JetBrains Mono</a>).</p>
+  </footer>
+</main>
+<aside class="outline" aria-label="On this page"><p class="outline-title">On this page</p><ul><li class="ol-l2"><a href="#four-words-to-know">Four Words to Know</a></li><li class="ol-l2"><a href="#the-swap-in-one-picture">The Swap in One Picture</a></li><li class="ol-l2"><a href="#why-the-noid-seller-always-goes-first">Why the NOID Seller Always Goes First</a></li><li class="ol-l2"><a href="#why-the-deadlines-are-staggered">Why the Deadlines Are Staggered</a></li><li class="ol-l2"><a href="#what-happens-if-something-goes-wrong">What Happens If Something Goes Wrong?</a></li></ul></aside>
+</div>
+</body>
+</html>

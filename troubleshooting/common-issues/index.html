@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050908">
+<title>&quot;Something Needs a Look&quot; Playbook - No1d Swap Docs</title>
+<meta name="description" content="No1d Swap is built to fail closed: whenever a node disagrees, a balance looks short, or a safety rule triggers, the app pauses and shows &quot;Something needs a look&quot; instead of...">
+<link rel="canonical" href="https://00para.github.io/noid-swap-docs/troubleshooting/common-issues/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/SpaceGrotesk-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../../" aria-label="No1d Swap Docs, home"><svg class="mark" viewBox="0 0 200 200" width="24" height="24" aria-hidden="true" focusable="false"><path d="M105.16 26.18 A74 74 0 1 1 27.12 87.15" fill="none" stroke="#9fe870" stroke-width="24" stroke-linecap="round"/><path d="M135.32 81.22 A40 40 0 0 1 78.80 133.92" fill="none" stroke="#93a8ff" stroke-width="22" stroke-linecap="round"/><rect x="90" y="90" width="20" height="20" rx="2.6" transform="rotate(45 100 100)" fill="#e6edea"/></svg><span class="brand-name">No1d Swap</span><span class="brand-docs">Docs</span></a>
+    <div class="top-actions">
+      <button type="button" class="search-btn" data-search hidden aria-label="Search the docs"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="7.2" cy="7.2" r="4.6"/><path d="m10.6 10.6 3.2 3.2"/></svg><span class="search-label">Search</span><kbd>/</kbd></button>
+      <a class="top-link" href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">GitHub</a>
+      <a class="top-link" href="https://x.com/No1dSwap" rel="noopener noreferrer">X</a>
+      <a class="menu-btn" href="#site-nav" aria-controls="site-nav" aria-expanded="false"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2.5 4.5h11"/><path d="M2.5 8h11"/><path d="M2.5 11.5h11"/></svg><span>Menu</span></a>
+    </div>
+  </div>
+</header>
+<div class="shell">
+<nav id="site-nav" class="sidenav" aria-label="Documentation">
+  <div class="sidenav-bar"><a class="sidenav-close" href="#main"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="m3.5 3.5 9 9"/><path d="m12.5 3.5-9 9"/></svg><span>Close menu</span></a></div>
+  <div class="nav-group"><p class="nav-sec" id="nav-sec-0">Overview</p><ul aria-labelledby="nav-sec-0"><li><a href="../../">Welcome to No1d Swap</a></li><li><a href="../../before-you-start/is-this-right-for-you/">Is No1d Swap Right for You Today?</a></li><li><a href="../../before-you-start/how-it-works/">How It Works</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-1">Getting Started</p><ul aria-labelledby="nav-sec-1"><li><a href="../../getting-started/install-and-verify/">Download &amp; Verify the Installer</a></li><li><a href="../../getting-started/first-launch-and-recovery/">First Launch, Recovery Code &amp; Node Setup</a></li><li><a href="../../getting-started/practice-swap/">Try a 5-Minute Practice Swap</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-2">Running a Real Swap</p><ul aria-labelledby="nav-sec-2"><li><a href="../../swap-guide/overview-and-checklist/">Swap Overview &amp; Two-Person Checklist</a></li><li><a href="../../swap-guide/alice-selling-noid/">Guide for Alice (Selling NOID)</a></li><li><a href="../../swap-guide/bob-selling-eth/">Guide for Bob (Selling ETH)</a></li><li><a href="../../swap-guide/caps-fees-and-timelines/">Caps, Fees &amp; Timelines</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-3">Safety, Security &amp; Verification</p><ul aria-labelledby="nav-sec-3"><li><a href="../../security/limits-and-risks/">Limits &amp; Risks</a></li><li><a href="../../security/verify-the-contracts/">Verify the Smart Contracts</a></li><li><a href="../../security/privacy-and-local-security/">Local Security &amp; Privacy</a></li><li><a href="../../security/track-record/">Live Track Record</a></li><li><a href="../../security/for-auditors/">For Auditors &amp; Cryptographers</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-4">Troubleshooting &amp; Recovery</p><ul aria-labelledby="nav-sec-4"><li><a href="../../troubleshooting/common-issues/" aria-current="page">&quot;Something Needs a Look&quot; Playbook</a></li><li><a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-5">Reference</p><ul aria-labelledby="nav-sec-5"><li><a href="../../reference/faq/">Frequently Asked Questions</a></li><li><a href="../../reference/glossary/">Glossary</a></li></ul></div>
+  <div class="nav-group nav-ext"><p class="nav-sec" id="nav-sec-ext">Project</p><ul aria-labelledby="nav-sec-ext">
+    <li><a href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">Source on GitHub</a></li>
+    <li><a href="https://x.com/No1dSwap" rel="noopener noreferrer">Updates on X</a></li>
+  </ul></div>
+</nav>
+<main id="main" class="main" tabindex="-1">
+  <article class="prose">
+<h1 id="something-needs-a-look-playbook">&quot;Something Needs a Look&quot; Playbook</h1>
+<p class="lead">No1d Swap is built to <strong>fail closed</strong>: whenever a node disagrees, a balance looks short, or a safety rule triggers, the app pauses and shows <strong>&quot;Something needs a look&quot;</strong> instead of guessing. That is normal and protects your coins.</p>
+<p>Find the message you see below and follow the exact steps.</p>
+<h2 id="1-miner-concentration-above-65-bob-cannot-approve">1. Miner Concentration Above 65% (Bob Cannot Approve)<a class="anchor" href="#1-miner-concentration-above-65-bob-cannot-approve" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> Parano1d's block headers show a single mining address produced more than <strong>65%</strong> of blocks over the last 24 hours (2,880 blocks) or 6 hours (720 blocks).</p>
+<p><strong>What to do:</strong></p>
+<ul>
+<li>Nothing is broken and no coins were locked.</li>
+<li>This hard block <strong>cannot be overridden</strong>.</li>
+<li>Wait until block production spreads out and both windows drop back to <strong>65% or lower</strong>—the approval screen reopens automatically.</li>
+</ul>
+<h2 id="2-short-deposit-flagged">2. Short Deposit Flagged<a class="anchor" href="#2-short-deposit-flagged" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> You sent slightly less <span class="coin coin-noid">NOID</span> or <span class="coin coin-eth">ETH</span> to the swap's deposit address than required (usually because wallet fees or the gas buffer weren't included).</p>
+<p><strong>What to do:</strong></p>
+<ul>
+<li>Look at the exact shortfall amount shown on the swap card.</li>
+<li>Send <strong>only the missing difference</strong> to the same swap deposit address shown on screen.</li>
+<li>Within ~15–60 seconds of the top-up block, the app automatically picks up the full balance and continues.</li>
+</ul>
+<h2 id="3-stuck-reveal-or-stuck-eth-refund-gas-spike">3. Stuck Reveal or Stuck ETH Refund (Gas Spike)<a class="anchor" href="#3-stuck-reveal-or-stuck-eth-refund-gas-spike" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> Ethereum base fees rose above the fee cap you set (default <strong>1 gwei</strong>), so your reveal or <span class="coin coin-eth">ETH</span> refund transaction is sitting unconfirmed in the mempool.</p>
+<p><strong>What to do:</strong></p>
+<ul>
+<li>Do <strong>not</strong> restart or delete the swap.</li>
+<li>Use the card's <strong>re-send at a higher fee cap</strong> action to replace the stuck transaction with a higher max fee.</li>
+<li><strong>For Alice:</strong> Check the clock carefully—your app automatically refuses to reveal in the last <strong>30 minutes</strong> before Bob's refund opens. If you bump the fee before the cutoff, the replacement goes out immediately.</li>
+</ul>
+<h2 id="4-ended-before-it-started-or-held-coins-in-an-unstarted-swap">4. &quot;Ended Before It Started&quot; (or Held Coins in an Unstarted Swap)<a class="anchor" href="#4-ended-before-it-started-or-held-coins-in-an-unstarted-swap" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> The funding or lock deadline passed before either side locked on-chain.</p>
+<ul>
+<li><strong>If the swap wallets hold zero balance:</strong> The app automatically moves the swap under <strong>Ended</strong> as <em>&quot;Ended before it started.&quot;</em> Nothing was sent and nothing is needed from you.</li>
+<li><strong>If you already sent coins to the swap wallet before it expired:</strong> The app <strong>never</strong> quietly hides a swap that holds funds. It stays active with <strong>Needs you</strong>, displays <strong>&quot;Held by this swap&quot;</strong> under <strong>Details</strong>, and shows <strong>&quot;Do not send anything here&quot;</strong> + <strong>&quot;Read the wallet again.&quot;</strong> Let the app record the abort and sweep your coins back to your payout address.</li>
+</ul>
+<h2 id="5-stale-node-reading-or-two-nodes-disagree">5. Stale Node Reading or Two Nodes Disagree<a class="anchor" href="#5-stale-node-reading-or-two-nodes-disagree" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> Your local Parano1d node (<code>127.0.0.1:9601</code>) fell behind, disconnected, or your two configured nodes reported different block tips, timestamps, or lock states.</p>
+<p><strong>What to do:</strong></p>
+<ol>
+<li>Open the <strong>Parano1d wallet app</strong> and confirm it is running and synced to the latest block.</li>
+<li>Check your internet connection and Ethereum RPC endpoints in <strong>Settings</strong>.</li>
+<li>Wait for two clean, fresh readings—the app resumes automatically once both nodes agree.</li>
+<li><strong>Never ignore a node-disagreement alarm on a live swap</strong>—if your primary and secondary nodes genuinely disagree on a block hash or producer, stop and check chain explorers/peers before locking.</li>
+</ol>
+<h2 id="6-bobs-late-claim-alarm">6. Bob's Late-Claim Alarm<a class="anchor" href="#6-bobs-late-claim-alarm" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> Alice has already revealed <code>s</code> on Ethereum, and the remaining time before Parano1d deadline <code>D - 19</code> is getting short.</p>
+<p><strong>What to do immediately:</strong></p>
+<ol>
+<li>Make sure your <strong>Parano1d wallet app</strong> is open, synced, and responding on <code>127.0.0.1:9601</code>.</li>
+<li>Keep your computer plugged in and online—your app will broadcast the <span class="coin coin-noid">NOID</span> close automatically as soon as it can reach a synced node.</li>
+<li>If this computer <strong>cannot</strong> sync or reach Parano1d in time, <strong>immediately use a second computer</strong> to broadcast Bob's close. See <a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a>.</li>
+</ol>
+<h2 id="7-leftover-sweep-waiting-delayed">7. Leftover Sweep Waiting / Delayed<a class="anchor" href="#7-leftover-sweep-waiting-delayed" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> The main swap settled, or aborted cleanly, and one side's leftover sweep (e.g., <span class="coin coin-noid">NOID</span> dust or remaining <span class="coin coin-eth">ETH</span> gas) hasn't gone out yet.</p>
+<p><strong>What to do:</strong></p>
+<ul>
+<li>If the swap wallet had no coin larger than the sweep fee (~0.0058 <span class="coin coin-noid">NOID</span> or 21,000 gas), there may simply be nothing worth sweeping left—the app retries on a 5-minute timer while letting the other chain's sweep finish immediately.</li>
+<li>Check the balances under <strong>Details</strong>. Once the main payout arrived in your own address, your swap coins are safe.</li>
+</ul>
+<h2 id="8-this-swap-cannot-end-by-itself-prepared-intent-never-sent">8. &quot;This Swap Cannot End by Itself&quot; (Prepared Intent Never Sent)<a class="anchor" href="#8-this-swap-cannot-end-by-itself-prepared-intent-never-sent" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> Rarely, a swap records an intent to fund or lock right before a crash or interruption, and the app cannot prove on its own whether that transaction was ever sent.</p>
+<p><strong>What to do:</strong></p>
+<ul>
+<li>Your coins are safe inside the swap's own wallet.</li>
+<li>Follow the <strong>Cancel a Never-Sent Intent</strong> procedure in <a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a>.</li>
+</ul>
+<h2 id="9-this-installation-is-damaged-reinstall-it">9. &quot;This Installation Is Damaged: Reinstall It.&quot;<a class="anchor" href="#9-this-installation-is-damaged-reinstall-it" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p><strong>What happened:</strong> At startup, the packaged app's runtime manifest check failed (corrupted disk, antivirus quarantine of a runtime binary, or tampered install).</p>
+<p><strong>What to do:</strong></p>
+<ol>
+<li><strong>Do not delete your data folder</strong> (<code>runs/</code> is separate from the app install folder and is never deleted by uninstalling).</li>
+<li>Re-download and <strong>verify</strong> the installer using <a href="../../getting-started/install-and-verify/">Download &amp; Verify the Installer</a>, then reinstall.</li>
+<li>If you have an urgent active swap and cannot reinstall immediately, use your paper recovery code + <code>swap-cli</code> via <a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a>.</li>
+</ol>
+
+  </article>
+  <nav class="pager" aria-label="Previous and next page"><a class="pager-prev" href="../../security/for-auditors/" rel="prev"><span class="pager-dir">Previous</span><span class="pager-title">For Auditors &amp; Cryptographers</span></a><a class="pager-next" href="../../troubleshooting/recovery-and-second-computer/" rel="next"><span class="pager-dir">Next</span><span class="pager-title">Emergency Recovery &amp; Second-Computer Close</span></a></nav>
+  <footer class="foot">
+    <p>These pages load nothing from other sites: no analytics, no web-font service, no scripts from elsewhere. The fonts are Space Grotesk and JetBrains Mono under the SIL Open Font License (<a href="../../assets/fonts/SpaceGrotesk-OFL.txt">Space Grotesk</a>, <a href="../../assets/fonts/JetBrainsMono-OFL.txt">JetBrains Mono</a>).</p>
+  </footer>
+</main>
+<aside class="outline" aria-label="On this page"><p class="outline-title">On this page</p><ul><li class="ol-l2"><a href="#1-miner-concentration-above-65-bob-cannot-approve">1. Miner Concentration Above 65% (Bob Cannot Approve)</a></li><li class="ol-l2"><a href="#2-short-deposit-flagged">2. Short Deposit Flagged</a></li><li class="ol-l2"><a href="#3-stuck-reveal-or-stuck-eth-refund-gas-spike">3. Stuck Reveal or Stuck ETH Refund (Gas Spike)</a></li><li class="ol-l2"><a href="#4-ended-before-it-started-or-held-coins-in-an-unstarted-swap">4. &quot;Ended Before It Started&quot; (or Held Coins in an Unstarted Swap)</a></li><li class="ol-l2"><a href="#5-stale-node-reading-or-two-nodes-disagree">5. Stale Node Reading or Two Nodes Disagree</a></li><li class="ol-l2"><a href="#6-bobs-late-claim-alarm">6. Bob's Late-Claim Alarm</a></li><li class="ol-l2"><a href="#7-leftover-sweep-waiting-delayed">7. Leftover Sweep Waiting / Delayed</a></li><li class="ol-l2"><a href="#8-this-swap-cannot-end-by-itself-prepared-intent-never-sent">8. &quot;This Swap Cannot End by Itself&quot; (Prepared Intent Never Sent)</a></li><li class="ol-l2"><a href="#9-this-installation-is-damaged-reinstall-it">9. &quot;This Installation Is Damaged: Reinstall It.&quot;</a></li></ul></aside>
+</div>
+</body>
+</html>

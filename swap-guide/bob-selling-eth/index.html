@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050908">
+<title>Guide for Bob (Selling ETH) - No1d Swap Docs</title>
+<meta name="description" content="Follow this guide if you hold  and want to receive .">
+<link rel="canonical" href="https://00para.github.io/noid-swap-docs/swap-guide/bob-selling-eth/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/SpaceGrotesk-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../../" aria-label="No1d Swap Docs, home"><svg class="mark" viewBox="0 0 200 200" width="24" height="24" aria-hidden="true" focusable="false"><path d="M105.16 26.18 A74 74 0 1 1 27.12 87.15" fill="none" stroke="#9fe870" stroke-width="24" stroke-linecap="round"/><path d="M135.32 81.22 A40 40 0 0 1 78.80 133.92" fill="none" stroke="#93a8ff" stroke-width="22" stroke-linecap="round"/><rect x="90" y="90" width="20" height="20" rx="2.6" transform="rotate(45 100 100)" fill="#e6edea"/></svg><span class="brand-name">No1d Swap</span><span class="brand-docs">Docs</span></a>
+    <div class="top-actions">
+      <button type="button" class="search-btn" data-search hidden aria-label="Search the docs"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="7.2" cy="7.2" r="4.6"/><path d="m10.6 10.6 3.2 3.2"/></svg><span class="search-label">Search</span><kbd>/</kbd></button>
+      <a class="top-link" href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">GitHub</a>
+      <a class="top-link" href="https://x.com/No1dSwap" rel="noopener noreferrer">X</a>
+      <a class="menu-btn" href="#site-nav" aria-controls="site-nav" aria-expanded="false"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2.5 4.5h11"/><path d="M2.5 8h11"/><path d="M2.5 11.5h11"/></svg><span>Menu</span></a>
+    </div>
+  </div>
+</header>
+<div class="shell">
+<nav id="site-nav" class="sidenav" aria-label="Documentation">
+  <div class="sidenav-bar"><a class="sidenav-close" href="#main"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="m3.5 3.5 9 9"/><path d="m12.5 3.5-9 9"/></svg><span>Close menu</span></a></div>
+  <div class="nav-group"><p class="nav-sec" id="nav-sec-0">Overview</p><ul aria-labelledby="nav-sec-0"><li><a href="../../">Welcome to No1d Swap</a></li><li><a href="../../before-you-start/is-this-right-for-you/">Is No1d Swap Right for You Today?</a></li><li><a href="../../before-you-start/how-it-works/">How It Works</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-1">Getting Started</p><ul aria-labelledby="nav-sec-1"><li><a href="../../getting-started/install-and-verify/">Download &amp; Verify the Installer</a></li><li><a href="../../getting-started/first-launch-and-recovery/">First Launch, Recovery Code &amp; Node Setup</a></li><li><a href="../../getting-started/practice-swap/">Try a 5-Minute Practice Swap</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-2">Running a Real Swap</p><ul aria-labelledby="nav-sec-2"><li><a href="../../swap-guide/overview-and-checklist/">Swap Overview &amp; Two-Person Checklist</a></li><li><a href="../../swap-guide/alice-selling-noid/">Guide for Alice (Selling NOID)</a></li><li><a href="../../swap-guide/bob-selling-eth/" aria-current="page">Guide for Bob (Selling ETH)</a></li><li><a href="../../swap-guide/caps-fees-and-timelines/">Caps, Fees &amp; Timelines</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-3">Safety, Security &amp; Verification</p><ul aria-labelledby="nav-sec-3"><li><a href="../../security/limits-and-risks/">Limits &amp; Risks</a></li><li><a href="../../security/verify-the-contracts/">Verify the Smart Contracts</a></li><li><a href="../../security/privacy-and-local-security/">Local Security &amp; Privacy</a></li><li><a href="../../security/track-record/">Live Track Record</a></li><li><a href="../../security/for-auditors/">For Auditors &amp; Cryptographers</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-4">Troubleshooting &amp; Recovery</p><ul aria-labelledby="nav-sec-4"><li><a href="../../troubleshooting/common-issues/">&quot;Something Needs a Look&quot; Playbook</a></li><li><a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-5">Reference</p><ul aria-labelledby="nav-sec-5"><li><a href="../../reference/faq/">Frequently Asked Questions</a></li><li><a href="../../reference/glossary/">Glossary</a></li></ul></div>
+  <div class="nav-group nav-ext"><p class="nav-sec" id="nav-sec-ext">Project</p><ul aria-labelledby="nav-sec-ext">
+    <li><a href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">Source on GitHub</a></li>
+    <li><a href="https://x.com/No1dSwap" rel="noopener noreferrer">Updates on X</a></li>
+  </ul></div>
+</nav>
+<main id="main" class="main" tabindex="-1">
+  <article class="prose">
+<h1 id="guide-for-bob-selling-eth">Guide for Bob (Selling ETH)</h1>
+<p class="lead">Follow this guide if you <strong>hold <span class="coin coin-eth">ETH</span></strong> and want to <strong>receive <span class="coin coin-noid">NOID</span></strong>.</p>
+<p>As Bob, you start the handshake by sending Alice an invitation, lock your <span class="coin coin-eth">ETH</span> <em>after</em> verifying Alice's <span class="coin coin-noid">NOID</span> lock is final, and claim the <span class="coin coin-noid">NOID</span> as soon as Alice reveals the secret on Ethereum.</p>
+<aside class="hint hint-danger" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M5.2 1.9h5.6l3.3 3.3v5.6l-3.3 3.3H5.2L1.9 10.8V5.2l3.3-3.3Z"/><path d="m6 6 4 4"/><path d="m10 6-4 4"/></svg></span><div class="hint-body"><span class="sr-only">Important: </span><p><strong>Two critical rules for Bob:</strong></p>
+<ol>
+<li><strong>Only swap with someone you have a reason to trust</strong> while Parano1d mining remains concentrated (see <a href="../../security/limits-and-risks/">Limits &amp; Risks</a>).</li>
+<li><strong>Stay online until the swap finishes.</strong> After Alice reveals the secret on Ethereum, your computer has <strong>at least ~75 minutes</strong> to claim your <span class="coin coin-noid">NOID</span>. If your computer is off or offline during that window, Alice can reclaim the <span class="coin coin-noid">NOID</span> after the deadline and keep your <span class="coin coin-eth">ETH</span>.</li>
+</ol>
+</div></aside>
+<h2 id="before-you-start">Before You Start<a class="anchor" href="#before-you-start" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>Make sure you have:</p>
+<ul>
+<li>The <strong>Parano1d wallet app</strong> open and fully synced on this computer (<code>127.0.0.1:9601</code>).</li>
+<li>Your <strong><span class="coin coin-eth">ETH</span></strong> to sell (up to <strong>0.5 <span class="coin coin-eth">ETH</span></strong> on mainnet; up to <strong>0.01 <span class="coin coin-eth">ETH</span></strong> on Sepolia), plus extra <span class="coin coin-eth">ETH</span> to cover the lock transaction (~584,000 gas) and a potential refund (~159,000 gas) if Alice stops.</li>
+<li>Your <strong>Parano1d payout address</strong> (<code>o1...</code>) where your claimed <span class="coin coin-noid">NOID</span> will be sent.</li>
+<li>Your <strong>Ethereum payout address</strong> (standard EOA) for sweeping back any leftover <span class="coin coin-eth">ETH</span> gas (or refund).</li>
+<li>Your computer plugged in with the lid open so it won't sleep mid-swap.</li>
+</ul>
+<h2 id="step-1-create-the-swap-send-an-invitation-to-alice">Step 1: Create the Swap &amp; Send an Invitation to Alice<a class="anchor" href="#step-1-create-the-swap-send-an-invitation-to-alice" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<ol>
+<li>Click <strong>New swap</strong> in No1d Swap and choose <strong>Bob (selling <span class="coin coin-eth">ETH</span>)</strong>.</li>
+<li>Choose the network (<strong>Ethereum Mainnet</strong> or <strong>Sepolia</strong>).</li>
+<li>Enter the agreed <strong><span class="coin coin-noid">NOID</span> amount</strong> (5–2,500 <span class="coin coin-noid">NOID</span> on mainnet) and <strong><span class="coin coin-eth">ETH</span> amount</strong> (up to 0.5 <span class="coin coin-eth">ETH</span> on mainnet).</li>
+<li>Enter your <strong>Parano1d payout address</strong> and <strong>Ethereum payout address</strong> (check the address-history indicator).</li>
+<li>Create the swap—the app generates a fresh per-swap Ethereum key for this swap.</li>
+<li>Send the invitation to Alice:
+<ul>
+<li><strong>As a file:</strong> Click <strong>Save an invitation for Alice…</strong> to save <code>no1d-invitation.json</code> and send it to Alice.</li>
+<li><strong>As a copyable code (v0.1.8 and later):</strong> Click <strong>Copy invitation code</strong> (<code>no1dinv1:…</code>) and paste it into your chat with Alice.</li>
+</ul>
+</li>
+</ol>
+<p>Both formats contain <strong>only public fields</strong> (network, contract, amounts, and your two public addresses)—zero secrets.</p>
+<aside class="hint hint-info" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6"/><path d="M8 5.1v.1"/></svg></span><div class="hint-body"><span class="sr-only">Note: </span><p><strong>Do not deposit <span class="coin coin-eth">ETH</span> yet!</strong> Wait until Alice sends back her swap file, you compare check lines, and you approve.</p>
+</div></aside>
+<h2 id="step-2-load-alices-swap-copy-check-the-check-line">Step 2: Load Alice's Swap Copy &amp; Check the Check Line<a class="anchor" href="#step-2-load-alices-swap-copy-check-the-check-line" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<ol>
+<li>Alice presses <strong>Prepare</strong> and sends you <code>alice.bundle.json</code>.</li>
+<li>Click <strong>Choose Alice's file…</strong> on your swap card and pick <code>alice.bundle.json</code>. Your app verifies the contract code hash, hashlock, amounts, and deadlines automatically.</li>
+<li>Both screens display a <strong>16-digit check line</strong> (<code>xxxx xxxx xxxx xxxx</code>).</li>
+<li>Compare the check line with Alice over a <strong>second channel</strong> (phone call, Signal, etc.) and confirm all 16 digits match.</li>
+</ol>
+<h2 id="step-3-check-parano1d-miner-concentration-approve-once">Step 3: Check Parano1d Miner Concentration &amp; Approve Once<a class="anchor" href="#step-3-check-parano1d-miner-concentration-approve-once" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>Before you lock any <span class="coin coin-eth">ETH</span>, No1d Swap reads Parano1d's own block headers across both the <strong>last 24 hours (2,880 blocks)</strong> and <strong>last 6 hours (720 blocks)</strong> to measure the largest single mining address:</p>
+<div class="table-wrap"><table role="table" class="two-col">
+<thead>
+<tr role="row">
+<th role="columnheader" scope="col">Largest producer share (24 h or 6 h)</th>
+<th role="columnheader" scope="col">What the app does</th>
+</tr>
+</thead>
+<tbody>
+<tr role="row">
+<td role="cell" data-label="Largest producer share (24 h or 6 h)"><strong>35% or lower</strong></td>
+<td role="cell" data-label="What the app does">Passes normally.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Largest producer share (24 h or 6 h)"><strong>Between 35% and 65%</strong></td>
+<td role="cell" data-label="What the app does">Shows the exact measured percentage inside your approval and asks you to explicitly accept it and confirm you have a reason to trust Alice.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Largest producer share (24 h or 6 h)"><strong>Above 65%</strong></td>
+<td role="cell" data-label="What the app does"><strong>Hard block.</strong> The approval is disabled and cannot be waived. The screen reopens automatically once both windows fall to 65% or lower.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Review the rate, fees, worst-case refund time (~2 h 20 min), and miner share, type the confirmation amount, tick the boxes, and approve once.</p>
+<h2 id="step-4-deposit-eth-into-the-swaps-ethereum-key">Step 4: Deposit ETH Into the Swap's Ethereum Key<a class="anchor" href="#step-4-deposit-eth-into-the-swaps-ethereum-key" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>After approval, the card displays <strong>this swap's Ethereum key address</strong> (in full, with clipboard read-back verification).</p>
+<ol>
+<li>Send the required <span class="coin coin-eth">ETH</span> amount (swap amount + gas reserve shown on screen) from your regular Ethereum wallet to that address.</li>
+<li>If your deposit is slightly short, the app flags the exact shortfall within seconds of the block so you can top it up.</li>
+</ol>
+<h2 id="step-5-stay-online-while-the-app-finishes-automatically">Step 5: Stay Online While the App Finishes Automatically<a class="anchor" href="#step-5-stay-online-while-the-app-finishes-automatically" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>Keep No1d Swap and your Parano1d wallet app open and online:</p>
+<ol>
+<li><strong>Waiting for Alice's <span class="coin coin-noid">NOID</span> lock:</strong> Your app verifies Alice's <span class="coin coin-noid">NOID</span> contract is funded and final on Parano1d (19 blocks), re-checks miner concentration, and verifies enough time remains before <code>D</code>.</li>
+<li><strong><span class="coin coin-eth">ETH</span> lock:</strong> Your app locks your <span class="coin coin-eth">ETH</span> in <code>HTLCPoseidonV2</code> on Ethereum and waits for finality (~19 minutes).</li>
+<li><strong>Watching for Alice's reveal:</strong> Once Alice takes your <span class="coin coin-eth">ETH</span>, her transaction publishes the secret <code>s</code> in Ethereum's <code>Claimed</code> event.</li>
+<li><strong><span class="coin coin-noid">NOID</span> claim:</strong> Your app immediately reads <code>s</code>, builds a zero-knowledge proof, and broadcasts the <span class="coin coin-noid">NOID</span> close transaction to Parano1d—sending the <span class="coin coin-noid">NOID</span> (minus the ~0.0058 <span class="coin coin-noid">NOID</span> close fee) straight to your Parano1d payout address.
+<ul>
+<li><strong>Late-claim alarm:</strong> If time is getting tight before <code>D - 19</code>, the app raises a prominent <strong>late-claim alarm</strong>.</li>
+</ul>
+</li>
+<li><strong>Leftover sweep:</strong> Any unused <span class="coin coin-eth">ETH</span> gas remaining in the temporary swap key is automatically swept back to your Ethereum payout address.</li>
+</ol>
+<p>The swap says <strong>Done</strong> only once the <span class="coin coin-noid">NOID</span> has finalized in your own Parano1d address.</p>
+<h2 id="what-if-alice-disappears-after-you-lock-eth">What If Alice Disappears After You Lock ETH?<a class="anchor" href="#what-if-alice-disappears-after-you-lock-eth" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<ul>
+<li>If Alice never reveals <code>s</code>, your app waits until the 2-hour Ethereum reveal window (<code>T_reveal</code>) expires (<strong>~2 h 20 min after your lock</strong>, including finality).</li>
+<li>Once <code>T_reveal</code> passes, your app automatically refunds your <span class="coin coin-eth">ETH</span> back to your payout address.</li>
+<li>If the refund gets stuck due to rising Ethereum gas, the card lets you <strong>re-send the refund at a higher fee cap</strong>.</li>
+</ul>
+<h2 id="what-if-your-computer-dies-after-alice-reveals">What If Your Computer Dies After Alice Reveals?<a class="anchor" href="#what-if-your-computer-dies-after-alice-reveals" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>Don't panic! Once <code>s</code> is public on Ethereum, <strong>you can broadcast the <span class="coin coin-noid">NOID</span> close from a second computer</strong> (and even a friend with only the public swap files can broadcast it—the contract forces 100% of the payout to your Parano1d address). Follow <a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a>.</p>
+
+  </article>
+  <nav class="pager" aria-label="Previous and next page"><a class="pager-prev" href="../../swap-guide/alice-selling-noid/" rel="prev"><span class="pager-dir">Previous</span><span class="pager-title">Guide for Alice (Selling NOID)</span></a><a class="pager-next" href="../../swap-guide/caps-fees-and-timelines/" rel="next"><span class="pager-dir">Next</span><span class="pager-title">Caps, Fees &amp; Timelines</span></a></nav>
+  <footer class="foot">
+    <p>These pages load nothing from other sites: no analytics, no web-font service, no scripts from elsewhere. The fonts are Space Grotesk and JetBrains Mono under the SIL Open Font License (<a href="../../assets/fonts/SpaceGrotesk-OFL.txt">Space Grotesk</a>, <a href="../../assets/fonts/JetBrainsMono-OFL.txt">JetBrains Mono</a>).</p>
+  </footer>
+</main>
+<aside class="outline" aria-label="On this page"><p class="outline-title">On this page</p><ul><li class="ol-l2"><a href="#before-you-start">Before You Start</a></li><li class="ol-l2"><a href="#step-1-create-the-swap-send-an-invitation-to-alice">Step 1: Create the Swap &amp; Send an Invitation to Alice</a></li><li class="ol-l2"><a href="#step-2-load-alices-swap-copy-check-the-check-line">Step 2: Load Alice's Swap Copy &amp; Check the Check Line</a></li><li class="ol-l2"><a href="#step-3-check-parano1d-miner-concentration-approve-once">Step 3: Check Parano1d Miner Concentration &amp; Approve Once</a></li><li class="ol-l2"><a href="#step-4-deposit-eth-into-the-swaps-ethereum-key">Step 4: Deposit ETH Into the Swap's Ethereum Key</a></li><li class="ol-l2"><a href="#step-5-stay-online-while-the-app-finishes-automatically">Step 5: Stay Online While the App Finishes Automatically</a></li><li class="ol-l2"><a href="#what-if-alice-disappears-after-you-lock-eth">What If Alice Disappears After You Lock ETH?</a></li><li class="ol-l2"><a href="#what-if-your-computer-dies-after-alice-reveals">What If Your Computer Dies After Alice Reveals?</a></li></ul></aside>
+</div>
+</body>
+</html>

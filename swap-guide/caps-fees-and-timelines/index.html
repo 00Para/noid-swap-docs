@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050908">
+<title>Caps, Fees &amp; Timelines - No1d Swap Docs</title>
+<meta name="description" content="No1d Swap displays the exact exchange rate, estimated fees, usual duration, and worst-case refund time before your first click. This page collects all exact protocol constants...">
+<link rel="canonical" href="https://00para.github.io/noid-swap-docs/swap-guide/caps-fees-and-timelines/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/SpaceGrotesk-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../../" aria-label="No1d Swap Docs, home"><svg class="mark" viewBox="0 0 200 200" width="24" height="24" aria-hidden="true" focusable="false"><path d="M105.16 26.18 A74 74 0 1 1 27.12 87.15" fill="none" stroke="#9fe870" stroke-width="24" stroke-linecap="round"/><path d="M135.32 81.22 A40 40 0 0 1 78.80 133.92" fill="none" stroke="#93a8ff" stroke-width="22" stroke-linecap="round"/><rect x="90" y="90" width="20" height="20" rx="2.6" transform="rotate(45 100 100)" fill="#e6edea"/></svg><span class="brand-name">No1d Swap</span><span class="brand-docs">Docs</span></a>
+    <div class="top-actions">
+      <button type="button" class="search-btn" data-search hidden aria-label="Search the docs"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="7.2" cy="7.2" r="4.6"/><path d="m10.6 10.6 3.2 3.2"/></svg><span class="search-label">Search</span><kbd>/</kbd></button>
+      <a class="top-link" href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">GitHub</a>
+      <a class="top-link" href="https://x.com/No1dSwap" rel="noopener noreferrer">X</a>
+      <a class="menu-btn" href="#site-nav" aria-controls="site-nav" aria-expanded="false"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2.5 4.5h11"/><path d="M2.5 8h11"/><path d="M2.5 11.5h11"/></svg><span>Menu</span></a>
+    </div>
+  </div>
+</header>
+<div class="shell">
+<nav id="site-nav" class="sidenav" aria-label="Documentation">
+  <div class="sidenav-bar"><a class="sidenav-close" href="#main"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="m3.5 3.5 9 9"/><path d="m12.5 3.5-9 9"/></svg><span>Close menu</span></a></div>
+  <div class="nav-group"><p class="nav-sec" id="nav-sec-0">Overview</p><ul aria-labelledby="nav-sec-0"><li><a href="../../">Welcome to No1d Swap</a></li><li><a href="../../before-you-start/is-this-right-for-you/">Is No1d Swap Right for You Today?</a></li><li><a href="../../before-you-start/how-it-works/">How It Works</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-1">Getting Started</p><ul aria-labelledby="nav-sec-1"><li><a href="../../getting-started/install-and-verify/">Download &amp; Verify the Installer</a></li><li><a href="../../getting-started/first-launch-and-recovery/">First Launch, Recovery Code &amp; Node Setup</a></li><li><a href="../../getting-started/practice-swap/">Try a 5-Minute Practice Swap</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-2">Running a Real Swap</p><ul aria-labelledby="nav-sec-2"><li><a href="../../swap-guide/overview-and-checklist/">Swap Overview &amp; Two-Person Checklist</a></li><li><a href="../../swap-guide/alice-selling-noid/">Guide for Alice (Selling NOID)</a></li><li><a href="../../swap-guide/bob-selling-eth/">Guide for Bob (Selling ETH)</a></li><li><a href="../../swap-guide/caps-fees-and-timelines/" aria-current="page">Caps, Fees &amp; Timelines</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-3">Safety, Security &amp; Verification</p><ul aria-labelledby="nav-sec-3"><li><a href="../../security/limits-and-risks/">Limits &amp; Risks</a></li><li><a href="../../security/verify-the-contracts/">Verify the Smart Contracts</a></li><li><a href="../../security/privacy-and-local-security/">Local Security &amp; Privacy</a></li><li><a href="../../security/track-record/">Live Track Record</a></li><li><a href="../../security/for-auditors/">For Auditors &amp; Cryptographers</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-4">Troubleshooting &amp; Recovery</p><ul aria-labelledby="nav-sec-4"><li><a href="../../troubleshooting/common-issues/">&quot;Something Needs a Look&quot; Playbook</a></li><li><a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-5">Reference</p><ul aria-labelledby="nav-sec-5"><li><a href="../../reference/faq/">Frequently Asked Questions</a></li><li><a href="../../reference/glossary/">Glossary</a></li></ul></div>
+  <div class="nav-group nav-ext"><p class="nav-sec" id="nav-sec-ext">Project</p><ul aria-labelledby="nav-sec-ext">
+    <li><a href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">Source on GitHub</a></li>
+    <li><a href="https://x.com/No1dSwap" rel="noopener noreferrer">Updates on X</a></li>
+  </ul></div>
+</nav>
+<main id="main" class="main" tabindex="-1">
+  <article class="prose">
+<h1 id="caps-fees-timelines">Caps, Fees &amp; Timelines</h1>
+<p class="lead">No1d Swap displays the exact exchange rate, estimated fees, usual duration, and worst-case refund time <strong>before your first click</strong>. This page collects all exact protocol constants and measured numbers from the app (<code>ui/app/lib/launchfacts.js</code> and <code>swap-cli/src/params.rs</code>).</p>
+<h2 id="swap-caps">Swap Caps<a class="anchor" href="#swap-caps" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<div class="table-wrap"><table role="table">
+<thead>
+<tr role="row">
+<th role="columnheader" scope="col">Limit</th>
+<th role="columnheader" scope="col">Ethereum Mainnet (<code>production</code>)</th>
+<th role="columnheader" scope="col">Ethereum Sepolia (<code>sepolia</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr role="row">
+<td role="cell" data-label="Limit"><strong>Maximum <span class="coin coin-noid">NOID</span> per swap</strong></td>
+<td role="cell" data-label="Ethereum Mainnet (production)"><strong>2,500 <span class="coin coin-noid">NOID</span></strong></td>
+<td role="cell" data-label="Ethereum Sepolia (sepolia)"><strong>20 <span class="coin coin-noid">NOID</span></strong></td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Limit"><strong>Maximum <span class="coin coin-eth">ETH</span> per swap</strong></td>
+<td role="cell" data-label="Ethereum Mainnet (production)"><strong>0.5 <span class="coin coin-eth">ETH</span></strong></td>
+<td role="cell" data-label="Ethereum Sepolia (sepolia)"><strong>0.01 <span class="coin coin-eth">ETH</span></strong></td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Limit"><strong>Minimum <span class="coin coin-noid">NOID</span> per swap</strong></td>
+<td role="cell" data-label="Ethereum Mainnet (production)"><strong>5 <span class="coin coin-noid">NOID</span></strong></td>
+<td role="cell" data-label="Ethereum Sepolia (sepolia)"><strong>5 <span class="coin coin-noid">NOID</span></strong></td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Limit"><strong>Project / protocol fee</strong></td>
+<td role="cell" data-label="Ethereum Mainnet (production)"><strong>0%</strong></td>
+<td role="cell" data-label="Ethereum Sepolia (sepolia)"><strong>0%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<aside class="hint hint-info" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6"/><path d="M8 5.1v.1"/></svg></span><div class="hint-body"><span class="sr-only">Note: </span><p><strong>Why is the minimum 5 <span class="coin coin-noid">NOID</span>?</strong> The swap tool sets each swap's close <code>max_fee</code> to at least <strong>50,000 <span class="coin coin-noid">μNOID</span></strong> (0.05 <span class="coin coin-noid">NOID</span>) and refuses one above <strong>1%</strong> of the locked amount. Below 5 <span class="coin coin-noid">NOID</span>, 1% is less than 50,000 <span class="coin coin-noid">μNOID</span>, so the app refuses smaller swaps.</p>
+</div></aside>
+<p>Caps are enforced in <strong>both</strong> the desktop settings layer and the underlying <code>swap-cli</code> profile.</p>
+<h2 id="network-fees">Network Fees<a class="anchor" href="#network-fees" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>You pay only blockchain network fees—No1d Swap takes no cut.</p>
+<h3 id="ethereum-gas-measured-vs-safety-ceilings">Ethereum Gas (Measured vs. Safety Ceilings)<a class="anchor" href="#ethereum-gas-measured-vs-safety-ceilings" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<div class="table-wrap"><table role="table">
+<thead>
+<tr role="row">
+<th role="columnheader" scope="col">Step</th>
+<th role="columnheader" scope="col">Who pays</th>
+<th role="columnheader" scope="col">Measured gas</th>
+<th role="columnheader" scope="col">App gas ceiling</th>
+</tr>
+</thead>
+<tbody>
+<tr role="row">
+<td role="cell" data-label="Step"><strong><span class="coin coin-eth">ETH</span> Lock</strong> (<code>newLock</code>)</td>
+<td role="cell" data-label="Who pays">Bob</td>
+<td role="cell" data-label="Measured gas">~583,853</td>
+<td role="cell" data-label="App gas ceiling">700,000</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Step"><strong><span class="coin coin-eth">ETH</span> Reveal / Claim</strong> (<code>claim</code>)</td>
+<td role="cell" data-label="Who pays">Alice</td>
+<td role="cell" data-label="Measured gas">~689,324</td>
+<td role="cell" data-label="App gas ceiling">1,000,000</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Step"><strong><span class="coin coin-eth">ETH</span> Refund</strong> (<code>refund</code>, abort path only)</td>
+<td role="cell" data-label="Who pays">Bob</td>
+<td role="cell" data-label="Measured gas">~158,608</td>
+<td role="cell" data-label="App gas ceiling">200,000</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Step"><strong><span class="coin coin-eth">ETH</span> Leftover Sweep</strong></td>
+<td role="cell" data-label="Who pays">Alice &amp; Bob</td>
+<td role="cell" data-label="Measured gas">21,000</td>
+<td role="cell" data-label="App gas ceiling">21,000</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Default fee cap:</strong> <strong>1 gwei</strong> (configurable before approval; the app never broadcasts above your fee cap).</li>
+<li><strong>Stuck transactions:</strong> If mainnet base fee spikes above your cap while a reveal or refund is waiting, the desktop card lets you <strong>re-send at a higher fee cap</strong> without restarting the swap.</li>
+<li><strong>Fee loudness warning:</strong> If total estimated fees exceed <strong>5%</strong> of your swap value, the form highlights it loudly so you don't accidentally overpay gas on a tiny swap.</li>
+</ul>
+<h3 id="parano1d-noid-fees">Parano1d (NOID) Fees<a class="anchor" href="#parano1d-noid-fees" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<p>1 <span class="coin coin-noid">NOID</span> = 1,000,000 <span class="coin coin-noid">micro-NOID</span> (<span class="coin coin-noid">μNOID</span>).</p>
+<div class="table-wrap"><table role="table">
+<thead>
+<tr role="row">
+<th role="columnheader" scope="col">Step</th>
+<th role="columnheader" scope="col">Who pays</th>
+<th role="columnheader" scope="col">Typical / minimum fee</th>
+<th role="columnheader" scope="col">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr role="row">
+<td role="cell" data-label="Step"><strong><span class="coin coin-noid">NOID</span> Funding</strong></td>
+<td role="cell" data-label="Who pays">Alice</td>
+<td role="cell" data-label="Typical / minimum fee">~9,000 <span class="coin coin-noid">μNOID</span> (~0.009 <span class="coin coin-noid">NOID</span>)</td>
+<td role="cell" data-label="Notes">Paid from Alice's swap wallet on top of the locked amount</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Step"><strong><span class="coin coin-noid">NOID</span> Close (Claim or Refund)</strong></td>
+<td role="cell" data-label="Who pays">Paid out of the locked <span class="coin coin-noid">NOID</span></td>
+<td role="cell" data-label="Typical / minimum fee">≥ 5,800 <span class="coin coin-noid">μNOID</span> (0.0058 <span class="coin coin-noid">NOID</span>), at most the swap's <code>max_fee</code> (at least 50,000 <span class="coin coin-noid">μNOID</span> / 0.05 <span class="coin coin-noid">NOID</span>, at most 1% of the amount)</td>
+<td role="cell" data-label="Notes">Receiver gets <code>locked amount − close fee</code></td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Step"><strong><span class="coin coin-noid">NOID</span> Leftover Sweep</strong></td>
+<td role="cell" data-label="Who pays">Alice</td>
+<td role="cell" data-label="Typical / minimum fee">~5,800 <span class="coin coin-noid">μNOID</span> (0.0058 <span class="coin coin-noid">NOID</span>)</td>
+<td role="cell" data-label="Notes">Sweeps any change left in the swap wallet</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="timelines-safety-windows-ethereum-mainnet">Timelines &amp; Safety Windows (Ethereum Mainnet)<a class="anchor" href="#timelines-safety-windows-ethereum-mainnet" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>All times below assume normal block speeds (<strong>30 s/block</strong> on Parano1d, <strong>~12 s/slot</strong> on Ethereum).</p>
+<div class="table-wrap"><table role="table">
+<thead>
+<tr role="row">
+<th role="columnheader" scope="col">Event / Window</th>
+<th role="columnheader" scope="col">Mainnet Value</th>
+<th role="columnheader" scope="col">Plain-English Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Usual total swap time</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>~50 minutes</strong></td>
+<td role="cell" data-label="Plain-English Meaning">Measured from Alice's funding to both sides final (most of this is chain finality).</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Ethereum finality wait</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>~19 minutes</strong> (1,140 s)</td>
+<td role="cell" data-label="Plain-English Meaning">Both sides wait for Ethereum finality before moving to the next irreversible step.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Parano1d finality wait</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>19 blocks</strong> (~9.5 min)</td>
+<td role="cell" data-label="Plain-English Meaning">Parano1d marks a block final 18 blocks after inclusion; claims must be included by <code>D - 19</code>.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Parano1d deadline (<code>D</code>)</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>738 blocks</strong> after Prepare (~6 h)</td>
+<td role="cell" data-label="Plain-English Meaning">After <code>D</code>, Bob can no longer claim and Alice can recover her <span class="coin coin-noid">NOID</span>.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Alice's <span class="coin coin-eth">ETH</span> reveal window (<code>W_A</code>)</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>7,200 seconds</strong> (2 hours) after Bob's lock</td>
+<td role="cell" data-label="Plain-English Meaning">Window during which <code>HTLCPoseidonV2.claim()</code> accepts Alice's secret.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Alice's reveal safety cutoff (<code>M_A</code>)</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>30 minutes</strong> before <code>T_reveal</code></td>
+<td role="cell" data-label="Plain-English Meaning">Alice's app refuses to reveal inside the last 30 min to avoid leaking <code>s</code> into a race with Bob's refund.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Bob's guaranteed online claim window</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>At least ~75 minutes</strong></td>
+<td role="cell" data-label="Plain-English Meaning">Time Bob has to claim <span class="coin coin-noid">NOID</span> and reach finality after Alice reveals.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Worst-case <span class="coin coin-eth">ETH</span> refund (Bob)</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>~2 h 20 min</strong> after Bob's lock</td>
+<td role="cell" data-label="Plain-English Meaning">Includes Ethereum finality + 2-hour reveal window.</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Event / Window"><strong>Worst-case <span class="coin coin-noid">NOID</span> refund (Alice)</strong></td>
+<td role="cell" data-label="Mainnet Value"><strong>~6 h 45 min</strong> after Prepare</td>
+<td role="cell" data-label="Plain-English Meaning">Time until Alice's <span class="coin coin-noid">NOID</span> is back in her own wallet if Bob never locks or Alice never reveals.</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="profile-comparison-mainnet-vs-sepolia">Profile Comparison (Mainnet vs. Sepolia)<a class="anchor" href="#profile-comparison-mainnet-vs-sepolia" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<div class="table-wrap"><table role="table">
+<thead>
+<tr role="row">
+<th role="columnheader" scope="col">Parameter</th>
+<th role="columnheader" scope="col">Mainnet (<code>production</code>)</th>
+<th role="columnheader" scope="col">Sepolia (<code>sepolia</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr role="row">
+<td role="cell" data-label="Parameter"><code>D</code> offset (Parano1d blocks)</td>
+<td role="cell" data-label="Mainnet (production)">738 blocks (~6 h)</td>
+<td role="cell" data-label="Sepolia (sepolia)">302 blocks (~2.5 h)</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Parameter"><span class="coin coin-eth">ETH</span> reveal window (<code>W_A</code>)</td>
+<td role="cell" data-label="Mainnet (production)">7,200 s (2 h)</td>
+<td role="cell" data-label="Sepolia (sepolia)">4,200 s (70 min)</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Parameter">Parano1d finality (<code>B_final</code>)</td>
+<td role="cell" data-label="Mainnet (production)">19 blocks</td>
+<td role="cell" data-label="Sepolia (sepolia)">19 blocks</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Parameter">Ethereum finality</td>
+<td role="cell" data-label="Mainnet (production)">1,140 s (~19 min)</td>
+<td role="cell" data-label="Sepolia (sepolia)">1,140 s (~19 min)</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Parameter">Usual end-to-end time</td>
+<td role="cell" data-label="Mainnet (production)">~50 min</td>
+<td role="cell" data-label="Sepolia (sepolia)">~50 min</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Parameter">Bob's guaranteed claim window after the reveal</td>
+<td role="cell" data-label="Mainnet (production)">at least ~75 min</td>
+<td role="cell" data-label="Sepolia (sepolia)"><strong>only ~5 min</strong>: Bob must be online when Alice reveals</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Parameter">Worst-case <span class="coin coin-eth">ETH</span> refund (Bob)</td>
+<td role="cell" data-label="Mainnet (production)">~2 h 20 min after his lock</td>
+<td role="cell" data-label="Sepolia (sepolia)">~1 h 30 min after his lock</td>
+</tr>
+<tr role="row">
+<td role="cell" data-label="Parameter">Worst-case <span class="coin coin-noid">NOID</span> refund (Alice)</td>
+<td role="cell" data-label="Mainnet (production)">~6 h 45 min after Prepare</td>
+<td role="cell" data-label="Sepolia (sepolia)">~3 h 5 min after Prepare</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="hint hint-warning" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 2.2 14.2 13H1.8L8 2.2Z"/><path d="M8 6.6v3"/><path d="M8 11.4v.1"/></svg></span><div class="hint-body"><span class="sr-only">Warning: </span><p><strong>Times are &quot;at usual block speed,&quot; never &quot;at most.&quot;</strong> If either chain produces blocks slower than usual, refund and finality times stretch proportionally.</p>
+</div></aside>
+
+  </article>
+  <nav class="pager" aria-label="Previous and next page"><a class="pager-prev" href="../../swap-guide/bob-selling-eth/" rel="prev"><span class="pager-dir">Previous</span><span class="pager-title">Guide for Bob (Selling ETH)</span></a><a class="pager-next" href="../../security/limits-and-risks/" rel="next"><span class="pager-dir">Next</span><span class="pager-title">Limits &amp; Risks</span></a></nav>
+  <footer class="foot">
+    <p>These pages load nothing from other sites: no analytics, no web-font service, no scripts from elsewhere. The fonts are Space Grotesk and JetBrains Mono under the SIL Open Font License (<a href="../../assets/fonts/SpaceGrotesk-OFL.txt">Space Grotesk</a>, <a href="../../assets/fonts/JetBrainsMono-OFL.txt">JetBrains Mono</a>).</p>
+  </footer>
+</main>
+<aside class="outline" aria-label="On this page"><p class="outline-title">On this page</p><ul><li class="ol-l2"><a href="#swap-caps">Swap Caps</a></li><li class="ol-l2"><a href="#network-fees">Network Fees</a></li><li class="ol-l3"><a href="#ethereum-gas-measured-vs-safety-ceilings">Ethereum Gas (Measured vs. Safety Ceilings)</a></li><li class="ol-l3"><a href="#parano1d-noid-fees">Parano1d (NOID) Fees</a></li><li class="ol-l2"><a href="#timelines-safety-windows-ethereum-mainnet">Timelines &amp; Safety Windows (Ethereum Mainnet)</a></li><li class="ol-l3"><a href="#profile-comparison-mainnet-vs-sepolia">Profile Comparison (Mainnet vs. Sepolia)</a></li></ul></aside>
+</div>
+</body>
+</html>

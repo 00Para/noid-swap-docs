@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#050908">
+<title>First Launch, Recovery Code &amp; Node Setup - No1d Swap Docs</title>
+<meta name="description" content="When you open No1d Swap for the first time, it sets up a private vault in your operating system's key store and gives you a paper recovery code. Do not rush past this screen.">
+<link rel="canonical" href="https://00para.github.io/noid-swap-docs/getting-started/first-launch-and-recovery/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/SpaceGrotesk-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/search-index.js" defer></script>
+<script src="../../assets/site.js" defer></script>
+</head>
+<body data-root="../../">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="../../" aria-label="No1d Swap Docs, home"><svg class="mark" viewBox="0 0 200 200" width="24" height="24" aria-hidden="true" focusable="false"><path d="M105.16 26.18 A74 74 0 1 1 27.12 87.15" fill="none" stroke="#9fe870" stroke-width="24" stroke-linecap="round"/><path d="M135.32 81.22 A40 40 0 0 1 78.80 133.92" fill="none" stroke="#93a8ff" stroke-width="22" stroke-linecap="round"/><rect x="90" y="90" width="20" height="20" rx="2.6" transform="rotate(45 100 100)" fill="#e6edea"/></svg><span class="brand-name">No1d Swap</span><span class="brand-docs">Docs</span></a>
+    <div class="top-actions">
+      <button type="button" class="search-btn" data-search hidden aria-label="Search the docs"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="7.2" cy="7.2" r="4.6"/><path d="m10.6 10.6 3.2 3.2"/></svg><span class="search-label">Search</span><kbd>/</kbd></button>
+      <a class="top-link" href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">GitHub</a>
+      <a class="top-link" href="https://x.com/No1dSwap" rel="noopener noreferrer">X</a>
+      <a class="menu-btn" href="#site-nav" aria-controls="site-nav" aria-expanded="false"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M2.5 4.5h11"/><path d="M2.5 8h11"/><path d="M2.5 11.5h11"/></svg><span>Menu</span></a>
+    </div>
+  </div>
+</header>
+<div class="shell">
+<nav id="site-nav" class="sidenav" aria-label="Documentation">
+  <div class="sidenav-bar"><a class="sidenav-close" href="#main"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="m3.5 3.5 9 9"/><path d="m12.5 3.5-9 9"/></svg><span>Close menu</span></a></div>
+  <div class="nav-group"><p class="nav-sec" id="nav-sec-0">Overview</p><ul aria-labelledby="nav-sec-0"><li><a href="../../">Welcome to No1d Swap</a></li><li><a href="../../before-you-start/is-this-right-for-you/">Is No1d Swap Right for You Today?</a></li><li><a href="../../before-you-start/how-it-works/">How It Works</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-1">Getting Started</p><ul aria-labelledby="nav-sec-1"><li><a href="../../getting-started/install-and-verify/">Download &amp; Verify the Installer</a></li><li><a href="../../getting-started/first-launch-and-recovery/" aria-current="page">First Launch, Recovery Code &amp; Node Setup</a></li><li><a href="../../getting-started/practice-swap/">Try a 5-Minute Practice Swap</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-2">Running a Real Swap</p><ul aria-labelledby="nav-sec-2"><li><a href="../../swap-guide/overview-and-checklist/">Swap Overview &amp; Two-Person Checklist</a></li><li><a href="../../swap-guide/alice-selling-noid/">Guide for Alice (Selling NOID)</a></li><li><a href="../../swap-guide/bob-selling-eth/">Guide for Bob (Selling ETH)</a></li><li><a href="../../swap-guide/caps-fees-and-timelines/">Caps, Fees &amp; Timelines</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-3">Safety, Security &amp; Verification</p><ul aria-labelledby="nav-sec-3"><li><a href="../../security/limits-and-risks/">Limits &amp; Risks</a></li><li><a href="../../security/verify-the-contracts/">Verify the Smart Contracts</a></li><li><a href="../../security/privacy-and-local-security/">Local Security &amp; Privacy</a></li><li><a href="../../security/track-record/">Live Track Record</a></li><li><a href="../../security/for-auditors/">For Auditors &amp; Cryptographers</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-4">Troubleshooting &amp; Recovery</p><ul aria-labelledby="nav-sec-4"><li><a href="../../troubleshooting/common-issues/">&quot;Something Needs a Look&quot; Playbook</a></li><li><a href="../../troubleshooting/recovery-and-second-computer/">Emergency Recovery &amp; Second-Computer Close</a></li></ul></div>
+<div class="nav-group"><p class="nav-sec" id="nav-sec-5">Reference</p><ul aria-labelledby="nav-sec-5"><li><a href="../../reference/faq/">Frequently Asked Questions</a></li><li><a href="../../reference/glossary/">Glossary</a></li></ul></div>
+  <div class="nav-group nav-ext"><p class="nav-sec" id="nav-sec-ext">Project</p><ul aria-labelledby="nav-sec-ext">
+    <li><a href="https://github.com/00Para/noid-swap" rel="noopener noreferrer">Source on GitHub</a></li>
+    <li><a href="https://x.com/No1dSwap" rel="noopener noreferrer">Updates on X</a></li>
+  </ul></div>
+</nav>
+<main id="main" class="main" tabindex="-1">
+  <article class="prose">
+<h1 id="first-launch-recovery-code-node-setup">First Launch, Recovery Code &amp; Node Setup</h1>
+<p class="lead">When you open No1d Swap for the first time, it sets up a private vault in your operating system's key store and gives you a <strong>paper recovery code</strong>. Do not rush past this screen.</p>
+<h2 id="1-save-your-recovery-code-first-launch">1. Save Your Recovery Code (First Launch)<a class="anchor" href="#1-save-your-recovery-code-first-launch" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>On first start, No1d Swap opens a dedicated, isolated <strong>secret window</strong> showing your recovery code.</p>
+<aside class="hint hint-danger" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M5.2 1.9h5.6l3.3 3.3v5.6l-3.3 3.3H5.2L1.9 10.8V5.2l3.3-3.3Z"/><path d="m6 6 4 4"/><path d="m10 6-4 4"/></svg></span><div class="hint-body"><span class="sr-only">Important: </span><p><strong>Write your recovery code on paper before you ever deposit coins.</strong></p>
+<ul>
+<li><strong>What it protects you from:</strong> If your OS key store is wiped, corrupted, or the desktop app refuses to start mid-swap, your recovery code + the swap's run folder let you unlock and finish the swap by hand with <code>swap-cli</code>.</li>
+<li><strong>Who can use it:</strong> Anyone who has <strong>both</strong> your recovery code and your run folders can access your swap keys. Store it on paper, not in cloud notes or screenshots.</li>
+</ul>
+</div></aside>
+<h3 id="where-your-run-folders-live">Where Your Run Folders Live<a class="anchor" href="#where-your-run-folders-live" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<p>No1d Swap stores each swap's state in a private, owner-only data folder (uninstalling the app never deletes it):</p>
+<div class="tabs" data-tabs>
+<section class="tab-panel" data-tab="macOS" aria-label="macOS"><p class="tab-title">macOS</p>
+<figure class="code is-line"><pre tabindex="0"><code class="language-text">~/Library/Application Support/No1d Swap/runs/&lt;swap-id&gt;/</code></pre></figure>
+</section>
+<section class="tab-panel" data-tab="Windows" aria-label="Windows"><p class="tab-title">Windows</p>
+<figure class="code is-line"><pre tabindex="0"><code class="language-text">%LOCALAPPDATA%\No1d Swap\runs\&lt;swap-id&gt;\</code></pre></figure>
+</section>
+</div>
+<h2 id="2-prepare-your-parano1d-node">2. Prepare Your Parano1d Node<a class="anchor" href="#2-prepare-your-parano1d-node" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>No1d Swap never trusts a remote server for your Parano1d chain view by default—it connects to the local <strong>Parano1d wallet app</strong> running on your own computer.</p>
+<ol>
+<li>Open the <strong>Parano1d wallet app</strong> and wait until it is <strong>fully synced</strong> to the chain tip.</li>
+<li>Confirm its local RPC server is listening on <strong><code>127.0.0.1:9601</code></strong> (the default).</li>
+<li>Keep the Parano1d wallet app open for the entire duration of any real swap.</li>
+</ol>
+<aside class="hint hint-info" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6.25"/><path d="M8 7.2v3.6"/><path d="M8 5.1v.1"/></svg></span><div class="hint-body"><span class="sr-only">Note: </span><p><strong>Just want to try the app first?</strong> You do <strong>not</strong> need the Parano1d wallet app, a synced node, or any coins to run the built-in <a href="../../getting-started/practice-swap/">Practice Swap</a>.</p>
+</div></aside>
+<h3 id="optional-second-parano1d-node-recommended-for-mainnet">Optional: Second Parano1d Node (Recommended for Mainnet)<a class="anchor" href="#optional-second-parano1d-node-recommended-for-mainnet" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h3>
+<p>For Ethereum mainnet swaps—especially if you are <strong>Bob (selling <span class="coin coin-eth">ETH</span>)</strong>—No1d Swap uses a two-node cross-check so a single lying or stalled node cannot trick you about chain tips, lock status, or miner concentration. Configure your node endpoints in <strong>Settings</strong> before starting a mainnet swap.</p>
+<h2 id="3-prepare-your-ethereum-wallet-funds">3. Prepare Your Ethereum Wallet &amp; Funds<a class="anchor" href="#3-prepare-your-ethereum-wallet-funds" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>No1d Swap creates a <strong>fresh, temporary swap wallet</strong> (one <span class="coin coin-noid">NOID</span> wallet + one Ethereum key) for every swap so you never paste your main wallet's seed phrase or private key into the app.</p>
+<p>Before starting a real swap, have ready:</p>
+<ul>
+<li><strong>Your regular Ethereum wallet</strong> (e.g., MetaMask or hardware wallet) on <strong>Ethereum mainnet</strong> (or <strong>Sepolia</strong> for a test run) with:
+<ul>
+<li><strong>If you are Bob (selling <span class="coin coin-eth">ETH</span>):</strong> Your swap amount + a small buffer for Ethereum gas (lock + optional refund/sweep).</li>
+<li><strong>If you are Alice (selling <span class="coin coin-noid">NOID</span>):</strong> Your own Ethereum payout address (an EOA—not a smart-contract wallet), plus a small amount of <span class="coin coin-eth">ETH</span> ready for the swap key to pay the reveal transaction gas (~689,000 gas).</li>
+</ul>
+</li>
+<li><strong>Your regular Parano1d wallet</strong> with:
+<ul>
+<li><strong>If you are Alice (selling <span class="coin coin-noid">NOID</span>):</strong> Your swap amount + a small buffer for the funding transaction fee (~0.009 <span class="coin coin-noid">NOID</span>).</li>
+<li><strong>If you are Bob (selling <span class="coin coin-eth">ETH</span>):</strong> Your own Parano1d payout address (<code>o1...</code>) where the claimed <span class="coin coin-noid">NOID</span> will be sent.</li>
+</ul>
+</li>
+</ul>
+<aside class="hint hint-warning" role="note"><span class="hint-icon"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M8 2.2 14.2 13H1.8L8 2.2Z"/><path d="M8 6.6v3"/><path d="M8 11.4v.1"/></svg></span><div class="hint-body"><span class="sr-only">Warning: </span><p><strong>Address-history safety net:</strong> No1d Swap seals a local history of payout addresses you've used before. When you enter a payout address, the form tells you whether it's <strong>new</strong>, <strong>previously used</strong>, or <strong>changed</strong> from your last swap—helping you catch clipboard typos before you deposit.</p>
+</div></aside>
+<h2 id="4-power-sleep-settings">4. Power &amp; Sleep Settings<a class="anchor" href="#4-power-sleep-settings" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>While coins are sitting in a contract, No1d Swap asks your OS to keep the computer awake. However:</p>
+<ul>
+<li><strong>On macOS laptops:</strong> Closing the lid on battery can <strong>still</strong> put the Mac to sleep. Leave your laptop plugged in with the lid open until the swap says <strong>Done</strong>.</li>
+<li><strong>On Windows:</strong> Power outages can interrupt pending folder writes. Keep your machine plugged in and avoid force-restarting mid-swap.</li>
+</ul>
+<h2 id="next-step">Next Step<a class="anchor" href="#next-step" aria-label="Link to this section"><svg class="ic" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M6.6 9.4a2.6 2.6 0 0 0 3.7 0l2.2-2.2a2.6 2.6 0 0 0-3.7-3.7l-.6.6"/><path d="M9.4 6.6a2.6 2.6 0 0 0-3.7 0L3.5 8.8a2.6 2.6 0 0 0 3.7 3.7l.6-.6"/></svg></a></h2>
+<p>Before touching real coins, take 5 minutes to run a <a href="../../getting-started/practice-swap/">Practice Swap</a>.</p>
+
+  </article>
+  <nav class="pager" aria-label="Previous and next page"><a class="pager-prev" href="../../getting-started/install-and-verify/" rel="prev"><span class="pager-dir">Previous</span><span class="pager-title">Download &amp; Verify the Installer</span></a><a class="pager-next" href="../../getting-started/practice-swap/" rel="next"><span class="pager-dir">Next</span><span class="pager-title">Try a 5-Minute Practice Swap</span></a></nav>
+  <footer class="foot">
+    <p>These pages load nothing from other sites: no analytics, no web-font service, no scripts from elsewhere. The fonts are Space Grotesk and JetBrains Mono under the SIL Open Font License (<a href="../../assets/fonts/SpaceGrotesk-OFL.txt">Space Grotesk</a>, <a href="../../assets/fonts/JetBrainsMono-OFL.txt">JetBrains Mono</a>).</p>
+  </footer>
+</main>
+<aside class="outline" aria-label="On this page"><p class="outline-title">On this page</p><ul><li class="ol-l2"><a href="#1-save-your-recovery-code-first-launch">1. Save Your Recovery Code (First Launch)</a></li><li class="ol-l3"><a href="#where-your-run-folders-live">Where Your Run Folders Live</a></li><li class="ol-l2"><a href="#2-prepare-your-parano1d-node">2. Prepare Your Parano1d Node</a></li><li class="ol-l3"><a href="#optional-second-parano1d-node-recommended-for-mainnet">Optional: Second Parano1d Node (Recommended for Mainnet)</a></li><li class="ol-l2"><a href="#3-prepare-your-ethereum-wallet-funds">3. Prepare Your Ethereum Wallet &amp; Funds</a></li><li class="ol-l2"><a href="#4-power-sleep-settings">4. Power &amp; Sleep Settings</a></li><li class="ol-l2"><a href="#next-step">Next Step</a></li></ul></aside>
+</div>
+</body>
+</html>
