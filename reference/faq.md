@@ -8,6 +8,8 @@ Bridges and pools introduce custodial multisigs, smart-contract liquidity honeyp
 ### Is there a fee to use No1d Swap?
 **No.** The project takes **0%**. You pay only standard Ethereum gas and Parano1d network transaction fees.
 
+If you'd like to support development and an external security audit voluntarily, NOID donations go to `o1epu2t45yg2a87xfvtzd3yuha8vejj9k4s762n89dwun3cp67k7nqkt2ued`.
+
 ---
 
 ### Is Sepolia NOID fake test money?

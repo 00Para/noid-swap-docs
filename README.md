@@ -55,3 +55,15 @@ A hash-time-locked contract on each chain holds the coins. Neither contract has 
 * **Pinned Ed25519 release public key:** `Thg9nhwwvqoKG4yOqiZM/PBeqT5LcrFFa7cKAHuqYxk=`
 
 Never trust contract addresses or installer hashes from screenshots or chat messages—always cross-check them using [Download & Verify the Installer](getting-started/install-and-verify.md) and [Verify the Smart Contracts](security/verify-the-contracts.md).
+
+---
+
+## Support the Project (Voluntary Donations)
+
+No1d Swap charges **0% protocol fees**. If you find it useful and want to support ongoing development and an independent external security audit, voluntary **NOID** donations are welcome:
+
+```text
+o1epu2t45yg2a87xfvtzd3yuha8vejj9k4s762n89dwun3cp67k7nqkt2ued
+```
+
+Donations are strictly optional and never required to use the software.
