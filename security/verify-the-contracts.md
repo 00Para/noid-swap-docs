@@ -67,7 +67,7 @@ There is no shared contract address on Parano1d. Instead, every swap generates i
 
 * `claim_authority` = `A = Addr(s)` (the 32-byte hashlock shared with Ethereum)
 * `claim_recipient` = Bob's pinned Parano1d payout address
-* `refund_recipient` = Alice's pinned Parano1d payout address
+* `refund_recipient` = Alice's address in the swap terms (in the desktop app, the swap's own NOID wallet, which then sweeps to her payout address)
 * `deadline` = `D` (block height)
 * `max_fee` = at least `50,000 μNOID` (0.05 NOID) and at most 1% of swap amount
 

@@ -31,8 +31,8 @@ Make sure you have:
 4. Enter your **Parano1d payout address** and **Ethereum payout address** (check the address-history indicator).
 5. Create the swap—the app generates a fresh per-swap Ethereum key for this swap.
 6. Send the invitation to Alice:
-   * **As a file (v0.1.7+):** Click **Save an invitation for Alice…** to save `no1d-invitation.json` and send it to Alice.
-   * **As a copyable code *(v0.1.8+, coming soon)*:** Click **Copy invitation code** (`no1dinv1:…`) and paste it into your chat with Alice.
+   * **As a file:** Click **Save an invitation for Alice…** to save `no1d-invitation.json` and send it to Alice.
+   * **As a copyable code (v0.1.8 and later):** Click **Copy invitation code** (`no1dinv1:…`) and paste it into your chat with Alice.
 
 Both formats contain **only public fields** (network, contract, amounts, and your two public addresses)—zero secrets.
 
@@ -45,7 +45,7 @@ Both formats contain **only public fields** (network, contract, amounts, and you
 ## Step 2: Load Alice's Swap Copy & Check the Check Line
 
 1. Alice presses **Prepare** and sends you `alice.bundle.json`.
-2. Open `alice.bundle.json` inside your swap card. Your app verifies the contract code hash, hashlock, amounts, and deadlines automatically.
+2. Click **Choose Alice's file…** on your swap card and pick `alice.bundle.json`. Your app verifies the contract code hash, hashlock, amounts, and deadlines automatically.
 3. Both screens display a **16-digit check line** (`xxxx xxxx xxxx xxxx`).
 4. Compare the check line with Alice over a **second channel** (phone call, Signal, etc.) and confirm all 16 digits match.
 

@@ -1,6 +1,6 @@
 # Live Track Record
 
-We believe you should know **exactly** what has been tested on real networks versus what has only been tested offline. This page summarizes every real run recorded in `00Para/noid-swap` up to release v0.1.7.
+We believe you should know **exactly** what has been tested on real networks versus what has only been tested offline. This page summarizes every real run recorded in `00Para/noid-swap` up to release v0.1.8.
 
 {% hint style="warning" %}
 **Honest headline:**
@@ -22,7 +22,7 @@ We believe you should know **exactly** what has been tested on real networks ver
 | **Runs 5–6** | Parano1d mainnet + **public Sepolia** (`poseidon`, proof-free) | 10 NOID ↔ 0.001 ETH | Settled in 47 min (Run 5); clean mutual refund after Bob's lock (Run 6). |
 | **Run 8** | Parano1d mainnet + **Ethereum Mainnet** (`poseidon`, `production`) | **5 NOID ↔ 0.001 ETH** | **Settled in 54 minutes** from funding to both sides final (`docs/live-run-8.md`). |
 | **Runs 9–14** | Two machines + two Parano1d nodes (Sepolia, `poseidon`) | 5 NOID ↔ 0.001 ETH | Tested accidental triple-funding recovery (Run 9), post-lock abort (Run 10), two-machine happy path (Run 11: 44 min), two-node cross-check (Run 12: 45 min), operator console (Run 13: 50 min), and finality-18 update (Run 14: 51 m 49 s). |
-| **Run 22** | Swap's own NOID wallet on Parano1d mainnet + Sepolia | 5 NOID | Verified funding, recovery close after `D`, and leftover sweeps (20,700 μNOID total fees). |
+| **Run 22** | Swap's own NOID wallet on Parano1d mainnet (one person, Alice's side only) | 5 NOID | Verified funding, recovery close after `D`, and leftover sweeps (20,700 μNOID total fees). |
 | **Run 23** | Desktop app on **Ethereum Mainnet** | — | Stopped cleanly **before any deposit** by Bob's producer-concentration screen (`docs/live-run-23.md`). |
 
 ### Hostile-Counterparty Campaign (Runs 15–20, Sepolia + Parano1d Mainnet)
@@ -49,12 +49,12 @@ All six hostile scenarios were run live against real chains with one operator pl
 
 In addition to live runs, the codebase ships with over **3,000 automated offline tests** across all components (including deterministic chaos fuzzing and an explicit-state model checker):
 
-* `ui/app` (console & desktop UI logic): **1,800+ tests**
-* `swap-cli` (Rust state machine, watchers, wallets, chaos oracle): **868+ tests**
-* `desktop` (Electron hardening, vault, ACLs, self-test, updates): **623+ tests**
+* `ui/app` (console & desktop UI logic): **1,897 tests**
+* `swap-cli` (Rust state machine, watchers, wallets, chaos oracle, adversarial tests): **895 tests** (+1 ignored)
+* `desktop` (Electron hardening, vault, ACLs, self-test, updates): **636 tests**
 * `scripts/live` (shell helpers): **780 cases**
 * `eth` (Hardhat contract & live-helper tests): **562 tests**
 * `btc` (signet prototype, not packaged in desktop): **91 tests**
-* `parano1d/harness` & `equiv` (Pruv harness & reference parity): **77 tests**
+* `parano1d/harness` & `equiv` (Pruv harness & reference parity): **78 tests** (harness 38, equiv 40)
 
 Full minute-by-minute logs for Runs 1–23 are published in `docs/live-run-*.md` in [00Para/noid-swap](https://github.com/00Para/noid-swap).

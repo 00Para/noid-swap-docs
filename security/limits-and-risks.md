@@ -37,7 +37,7 @@ Even when nobody loses their coins, atomic swaps have economic quirks you should
 * **Liquidity lock-up (griefing):** If Bob disappears after Alice funds NOID, Alice gets 100% of her NOID back (minus network fees), but her funds are tied up for **~6 h 45 min**.
 * **On-chain linkability:** Anyone watching both chains can link Alice's NOID lock and Bob's ETH lock via the shared 32-byte value `A = Addr(s)` (even for swaps that refund).
 * **No smart-contract wallets on Ethereum:** Ethereum payout addresses must be standard EOAs. A contract receiver that reverts on ETH transfer would cause `claim()` to revert *with the secret already exposed in calldata*.
-* **First-seen mempool on Parano1d (close fee griefing):** Anyone who knows `s` can broadcast the NOID close to Bob at up to `max_fee` (at most **50,000 μNOID / 0.05 NOID**, capped at 1% of the swap). The NOID still goes strictly to Bob, but Bob absorbs that fee.
+* **First-seen mempool on Parano1d (close fee griefing):** Anyone who knows `s` can broadcast the NOID close to Bob at any fee up to the swap's `max_fee` (at least **50,000 μNOID / 0.05 NOID**, more when the network's fee estimate is high, and never above 1% of the swap). The NOID still goes strictly to Bob, but Bob absorbs that fee.
 
 ---
 

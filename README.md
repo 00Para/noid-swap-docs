@@ -18,7 +18,8 @@ A hash-time-locked contract on each chain holds the coins. Neither contract has 
 | **Minimum swap** | **5 NOID** | **5 NOID** |
 | **Protocol fee** | **0%** (network fees only) | **0%** (network fees only) |
 | **Typical time** | **~50 minutes** from funding to settled | **~50 minutes** |
-| **Refund time (if stopped)** | ETH: **~2 h 20 min** · NOID: **~6 h 45 min** | Shorter windows |
+| **Refund time (if stopped)** | ETH: **~2 h 20 min** · NOID: **~6 h 45 min** | ETH: **~1 h 30 min** · NOID: **~3 h 5 min** |
+| **Bob's claim window after the reveal** | **at least ~75 min** | **only ~5 min** (stay online) |
 | **Supported OS** | Windows (x64) · macOS (Apple Silicon) | Windows (x64) · macOS (Apple Silicon) |
 
 {% hint style="info" %}

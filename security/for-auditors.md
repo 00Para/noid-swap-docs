@@ -62,13 +62,13 @@ Focus your review on the **live mainnet swap surface** first (everything else is
 
 ```sh
 # Node suites (Node 21+, offline)
-cd eth && npm install && npx hardhat test
+(cd eth && npm install && npx hardhat test)
 node --test "ui/app/test/*.test.js"
 node --test "desktop/test/*.test.js"
 
-# Rust suites (Linux / macOS / WSL2)
-cd swap-cli && cargo test --offline
-cd parano1d/harness && cargo test
+# Rust suites (Linux / macOS / WSL2), from the repository root
+(cd swap-cli && cargo test --offline)
+(cd parano1d/harness && cargo test)
 ```
 
 ## Responsible Disclosure

@@ -14,7 +14,7 @@ No1d Swap displays the exact exchange rate, estimated fees, usual duration, and 
 | **Project / protocol fee** | **0%** | **0%** |
 
 {% hint style="info" %}
-**Why is the minimum 5 NOID?** The Parano1d HTLC enforces that a close's `max_fee` is at least **50,000 μNOID** (0.05 NOID) and at most **1%** of the locked amount. Below 5 NOID, 1% is less than 50,000 μNOID, so the app refuses smaller swaps.
+**Why is the minimum 5 NOID?** The swap tool sets each swap's close `max_fee` to at least **50,000 μNOID** (0.05 NOID) and refuses one above **1%** of the locked amount. Below 5 NOID, 1% is less than 50,000 μNOID, so the app refuses smaller swaps.
 {% endhint %}
 
 Caps are enforced in **both** the desktop settings layer and the underlying `swap-cli` profile.
@@ -45,7 +45,7 @@ You pay only blockchain network fees—No1d Swap takes no cut.
 | Step | Who pays | Typical / minimum fee | Notes |
 |---|---|---|---|
 | **NOID Funding** | Alice | ~9,000 μNOID (~0.009 NOID) | Paid from Alice's swap wallet on top of the locked amount |
-| **NOID Close (Claim or Refund)** | Paid out of the locked NOID | ≥ 5,800 μNOID (0.0058 NOID), capped at `max_fee` (50,000 μNOID / 0.05 NOID) | Receiver gets `locked amount − close fee` |
+| **NOID Close (Claim or Refund)** | Paid out of the locked NOID | ≥ 5,800 μNOID (0.0058 NOID), at most the swap's `max_fee` (at least 50,000 μNOID / 0.05 NOID, at most 1% of the amount) | Receiver gets `locked amount − close fee` |
 | **NOID Leftover Sweep** | Alice | ~5,800 μNOID (0.0058 NOID) | Sweeps any change left in the swap wallet |
 
 ---
@@ -75,6 +75,9 @@ All times below assume normal block speeds (**30 s/block** on Parano1d, **~12 s/
 | Parano1d finality (`B_final`) | 19 blocks | 19 blocks |
 | Ethereum finality | 1,140 s (~19 min) | 1,140 s (~19 min) |
 | Usual end-to-end time | ~50 min | ~50 min |
+| Bob's guaranteed claim window after the reveal | at least ~75 min | **only ~5 min**: Bob must be online when Alice reveals |
+| Worst-case ETH refund (Bob) | ~2 h 20 min after his lock | ~1 h 30 min after his lock |
+| Worst-case NOID refund (Alice) | ~6 h 45 min after Prepare | ~3 h 5 min after Prepare |
 
 {% hint style="warning" %}
 **Times are "at usual block speed," never "at most."** If either chain produces blocks slower than usual, refund and finality times stretch proportionally.

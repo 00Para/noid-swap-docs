@@ -23,8 +23,8 @@ Bob creates the swap first and sends you his invitation.
 
 1. Click **New swap** in No1d Swap and choose **Alice (selling NOID)**.
 2. Load Bob's invitation:
-   * **From a file (v0.1.7+):** Click **Open Bob's invitation…** and select the `no1d-invitation.json` file Bob sent you.
-   * **From a pasted code *(v0.1.8+, coming soon)*:** Paste Bob's `no1dinv1:…` invitation code into the paste box and click **Use code**.
+   * **From a file:** Click **Open Bob's invitation…** and select the `no1d-invitation.json` file Bob sent you.
+   * **From a pasted code (v0.1.8 and later):** Paste Bob's `no1dinv1:…` invitation code into the paste box and click **Use code**. The code's checksum catches a damaged paste, not a forged one, so the next step still matters.
 3. **Double-check every auto-filled field:** network (Mainnet vs. Sepolia), NOID amount, ETH amount, and Bob's addresses. Never trust an auto-fill blindly.
 4. Enter **your Ethereum payout address** (where your ETH will be sent) and check the address-history note (*new*, *used before*, or *changed*).
 5. Review the **rate, fees, usual time (~50 min), and worst-case refund time (~6 h 45 min)** displayed on the form.
@@ -39,7 +39,7 @@ Bob creates the swap first and sends you his invitation.
 
 1. Click **Prepare**.
    * Behind the scenes, No1d Swap creates a fresh per-swap NOID wallet, a fresh per-swap Ethereum key, a random 32-byte secret `s` (sealed in your vault), and the Parano1d contract opening.
-2. Click **Save swap file for Bob…** to save `alice.bundle.json`.
+2. Click **Save a copy for Bob…** to save `alice.bundle.json`.
    * This file contains **only public swap terms and hashes**—never your secret or keys.
 3. Send `alice.bundle.json` to Bob.
 

@@ -66,6 +66,10 @@ swap-cli intent "$RUN/bob/bob.swap.json" --cancel --i-checked-the-wallet <NODE_O
 
 Use this if you are **Bob**, Alice has already revealed `s`, and your main computer is off, loses internet, or cannot sync Parano1d in time before `D - 19`.
 
+{% hint style="warning" %}
+**Shown live with the terminal tools, not yet with the desktop app.** A third-party close paid Bob's address in run 19 (`docs/live-run-19.md`), using the terminal helpers of `scripts/live/`. Nobody has yet done it from a copy of a desktop app's run folder. Read `docs/runbook-two-party.md` before you need it, not during the swap.
+{% endhint %}
+
 ### What the Second Computer Needs
 1. The project's terminal tools set up once with `scripts/live/setup.sh`.
 2. A synced Parano1d node.

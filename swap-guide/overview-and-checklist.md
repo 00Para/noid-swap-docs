@@ -17,9 +17,9 @@ Only *after* both sides confirm the check line and approve does anyone deposit c
 | Step | Alice (sells NOID → gets ETH) | Bob (sells ETH → gets NOID) |
 |---|---|---|
 | **0. Agree on terms** | Agree on exact NOID & ETH amounts and network (Mainnet or Sepolia). | Agree on exact NOID & ETH amounts and network. |
-| **1. Invitation** | Wait for Bob's invitation. | Create a **New swap** as Bob → **Save an invitation for Alice…** (`no1d-invitation.json`) *(or **Copy invitation code** in v0.1.8+)* and send it to Alice. |
+| **1. Invitation** | Wait for Bob's invitation. | Create a **New swap** as Bob → **Save an invitation for Alice…** (`no1d-invitation.json`) *(or **Copy invitation code**, v0.1.8 and later)* and send it to Alice. |
 | **2. Prepare** | Open Bob's invitation in **New swap**, double-check every field, enter your payout addresses, and click **Prepare**. *(This starts the ~6-hour NOID clock!)* | Wait for Alice's public swap file. |
-| **3. Swap copy** | Save your public swap copy (`alice.bundle.json`) and send it to Bob. | Load `alice.bundle.json` into your swap; the app verifies it automatically. |
+| **3. Swap copy** | Save your public swap copy (`alice.bundle.json`) and send it to Bob. | **Choose Alice's file…** (`alice.bundle.json`); the app verifies it automatically. |
 | **4. Check line** | Read your **16-digit check line** (`xxxx xxxx xxxx xxxx`) to Bob on another channel and confirm it matches. | Compare your **16-digit check line** with Alice's and confirm it matches. |
 | **5. Single approval** | Review rate, fees, and worst-case refund time → approve once. | Review rate, fees, worst-case refund time, and **Parano1d miner share** → approve once. |
 | **6. Deposit** | Send NOID (and a tiny ETH gas reserve for reveal) to the swap's own deposit addresses shown on screen. | Send ETH (+ gas buffer) to the swap's own Ethereum key address shown on screen. |
@@ -50,7 +50,7 @@ If the check lines don't match **digit for digit**, stop and do not approve or d
 * [ ] **Paper recovery code** is written down safely.
 * [ ] **Both people are at their screens** before Alice presses **Prepare**.
 * [ ] **Laptops are plugged in** with lids open (closing a Mac lid on battery can sleep it).
-* [ ] **Testnet reminder:** If you're doing a dry run on **Sepolia**, remember that **NOID is still real mainnet NOID** (capped at 20 NOID / 0.01 Sepolia ETH).
+* [ ] **Testnet reminder:** If you're doing a dry run on **Sepolia**, remember that **NOID is still real mainnet NOID** (capped at 20 NOID / 0.01 Sepolia ETH), and Bob's claim window after the reveal is only about **5 minutes** on Sepolia (75 on mainnet): Bob stays at his screen.
 
 ---
 

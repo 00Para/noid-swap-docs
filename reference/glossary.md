@@ -29,7 +29,7 @@ The point at which a blockchain considers a block irreversible under normal oper
 A smart contract lock with two paths: before a deadline, whoever proves knowledge of a secret `s` matching the hashlock gets the coins; after the deadline, the original sender gets them back.
 
 ### Invitation (`no1d-invitation.json` / `no1dinv1:…`)
-The public swap parameters Bob sends to Alice to start a swap (network, contract, NOID amount, ETH amount, and Bob's two public addresses). Holds zero secrets. Supported as a JSON file in v0.1.7 and also as a copy-pasteable `no1dinv1:…` code starting in v0.1.8.
+The public swap parameters Bob sends to Alice to start a swap (network, contract, NOID amount, ETH amount, and Bob's two public addresses). Holds zero secrets. A JSON file, and since v0.1.8 also a one-line `no1dinv1:…` code with a checksum that catches a damaged paste (not a forged one: Alice still checks every filled value and the check line).
 
 ### Micro-NOID (μNOID)
 The smallest unit of NOID: **1 NOID = 1,000,000 μNOID**. Parano1d close fees start at 5,800 μNOID (0.0058 NOID).
