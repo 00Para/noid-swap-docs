@@ -34,7 +34,7 @@ Make sure you have:
    * **As a file:** Click **Save an invitation for Alice…** to save `no1d-invitation.json` and send it to Alice.
    * **As a copyable code (v0.1.8 and later):** Click **Copy invitation code** (`no1dinv1:…`) and paste it into your chat with Alice.
 
-Both formats contain **only public fields** (network, contract, amounts, and your two public addresses)—zero secrets.
+Both formats contain **only public fields** (network, contract, amounts, and your two public addresses)—zero secrets. (Alice's swap copy, `alice.bundle.json`, travels the other way as a file, never as pasted text.)
 
 {% hint style="info" %}
 **Do not deposit ETH yet!** Wait until Alice sends back her swap file, you compare check lines, and you approve.

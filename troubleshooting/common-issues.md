@@ -99,3 +99,16 @@ Find the message you see below and follow the exact steps.
 1. **Do not delete your data folder** (`runs/` is separate from the app install folder and is never deleted by uninstalling).
 2. Re-download and **verify** the installer using [Download & Verify the Installer](../getting-started/install-and-verify.md), then reinstall.
 3. If you have an urgent active swap and cannot reinstall immediately, use your paper recovery code + `swap-cli` via [Emergency Recovery & Second-Computer Close](recovery-and-second-computer.md).
+
+---
+
+## 10. "Not an Invitation of This Program, or It Is Damaged"
+
+**What happened:** You are Alice and pasted Bob's invitation code (or opened his file), and the app refused it. The words are: *"That file is not an invitation of this program, or it is damaged. Nothing was filled."* The code's checksum caught a cut-off, changed or mistyped paste, or the text is not an invitation at all.
+
+**What to do:**
+* Nothing was filled in and nothing is at risk.
+* Ask Bob to press **Copy invitation code** again and paste the whole line (it starts with `no1dinv1:`). Spaces or line breaks around it are fine.
+* If it keeps failing, ask Bob to send the invitation as a file instead (**Save an invitation for Alice…**) and use **Open Bob's invitation…**.
+* Related refusals: *"too large to be an invitation"*, an invitation for a network the program does not use (Sepolia or Ethereum mainnet only), or amounts above the program's limit for that network. Ask Bob to create the swap again within the limits.
+* The checksum only catches damage, not a forged invitation. Always read every filled value and compare the check line with Bob on a second channel.

@@ -18,14 +18,14 @@ Before running a swap with real coins, walk through the built-in **Practice Swap
 
 ## What You Will Experience
 
-Every practice screen displays a clear **Practice banner** at the top so you can never confuse it with a real swap. Every address and amount is intentionally synthetic—nothing looks like a real Parano1d or Ethereum address, and you'll click a **"Pretend"** deposit button instead of sending real funds.
+Every practice screen displays a clear **Practice banner** at the top ("Practice. Nothing here is real. No coins move.") and the window title reads "Practice · No1d Swap", so you can never confuse it with a real swap. The made-up swap is 10 NOID for 0.001 ETH, so you type `10 NOID` or `0.001 ETH` at the approval. Every address and amount is intentionally synthetic—nothing looks like a real Parano1d or Ethereum address, and you'll click a **"Pretend"** deposit button instead of sending real funds.
 
 There are three scenarios, each playable as Alice or as Bob:
 1. **A swap that goes through** — from the invitation and the check lines through funding, lock, reveal, claim and the leftover sweep.
 2. **The other side never locks** — Alice's NOID comes back after the deadline; Bob's swap simply never starts.
 3. **Alice never reveals** — both locks, then the reveal is refused as too late, Bob's ETH is refunded and Alice takes her NOID back after the deadline.
 
-Each wait ends after a few seconds (or press **Skip the wait**), and the real time of each step is shown beside it.
+Each wait ends after about 8 seconds (or press **Skip the wait**), and the real time of each step is shown beside it.
 
 Try running Practice Swap **once as Alice and once as Bob**—it takes about five minutes total and makes your first real swap feel completely familiar.
 
