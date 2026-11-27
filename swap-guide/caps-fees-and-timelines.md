@@ -8,8 +8,8 @@ No1d Swap displays the exact exchange rate, estimated fees, usual duration, and 
 
 | Limit | Ethereum Mainnet (`production`) | Ethereum Sepolia (`sepolia`) |
 |---|---|---|
-| **Maximum NOID per swap** | **2,500 NOID** | **20 NOID** |
-| **Maximum ETH per swap** | **0.5 ETH** | **0.01 ETH** |
+| **Maximum NOID per swap** | **20,000 NOID** | **20 NOID** |
+| **Maximum ETH per swap** | **1 ETH** | **0.01 ETH** |
 | **Minimum NOID per swap** | **5 NOID** | **5 NOID** |
 | **Project / protocol fee** | **0%** | **0%** |
 
@@ -18,6 +18,15 @@ No1d Swap displays the exact exchange rate, estimated fees, usual duration, and 
 {% endhint %}
 
 Caps are enforced in **both** the desktop settings layer and the underlying `swap-cli` profile.
+
+## Market Reference Rate (Mainnet Only)
+
+On Ethereum mainnet, the new-swap form and the approval show a **market reference** beside the swap's own rate, for example "This swap: 1 ETH = 5,950 NOID, 19% above the reference". It is for comparing and nothing more.
+
+* **Display only.** It never changes, blocks or fills in a term, and it is not saved in the swap, the invitation or a backup.
+* **Source:** the project's own site snapshot, read by the program at most once in ten minutes. It sends nothing about you or your swap. If you set "Check for a new version" to "Never", no read is made.
+* **Hidden when it cannot be trusted:** older than 30 minutes it is greyed as stale and not compared; older than 6 hours, missing, or from a thin NOID market (under 10,000 USD traded in 24 hours) it shows "Reference rate unavailable". NOID trades on one small exchange, so the reference can be off. A swap more than 20% from it gets the note "Far from the reference."
+* Test networks and the practice swap show nothing.
 
 ---
 

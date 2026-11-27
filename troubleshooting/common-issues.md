@@ -6,15 +6,15 @@ Find the message you see below and follow the exact steps.
 
 ---
 
-## 1. Miner Concentration Above 65% (Bob Cannot Approve)
+## 1. Miner Concentration Warning (Bob's Approval)
 
-**What happened:** Parano1d's block headers show a single mining address produced more than **65%** of blocks over the last 24 hours (2,880 blocks) or 6 hours (720 blocks).
+**What happened:** Parano1d's block headers show a single mining address produced more than **35%** (warning) or **50%** (loud warning) of blocks over the last 24 hours (2,880 blocks) or 6 hours (720 blocks), or the share could not be read ("unknown"). Since 0.2.0 this **warns and never refuses**.
 
 **What to do:**
-* Nothing is broken and no coins were locked.
-* This hard block **cannot be overridden**.
-* Wait until block production spreads out and both windows drop back to **65% or lower**—the approval screen reopens automatically.
-* While this holds, no mainnet swap can complete. The screen refuses only **Bob's** approval: Alice can still prepare and fund. **If you are selling NOID, do not fund on mainnet** until Bob's program says it would lock; funded NOID stays locked about 6 h 45 min before it comes back, less the fees.
+* Nothing is broken. Bob ticks that he read the warning and can still approve.
+* **Read it as a real risk.** Above half of the blocks, a miner who is Alice can take Bob's ETH and no time window protects Bob. At the late-November readings (about 76% to 82%) that is likely, not just possible. If you are Bob, swap only with someone you have a reason to trust, or wait.
+* If you are selling NOID (Alice), this screen does not concern you; you are not exposed to it.
+* A different problem, a second Parano1d node that disagrees or cannot be read, **does** still stop the lock. See entry 5.
 
 ---
 

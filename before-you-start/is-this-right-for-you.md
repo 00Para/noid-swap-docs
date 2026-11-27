@@ -8,10 +8,10 @@ Before you install anything, take two minutes to check whether No1d Swap fits wh
 
 No1d Swap is a good fit **today** if all five of these are true:
 
-1. **You already have a counterparty you have a reason to trust.**
-   There is no order book or matching engine. More importantly, Parano1d mining is currently concentrated enough that an ETH seller should only swap with someone they have a reason to trust (see below).
+1. **You have a counterparty you have a reason to trust.**
+   There is no order book or matching engine. Bob can post his invitation on the public offers board to find someone (see [Finding a counterparty](../swap-guide/overview-and-checklist.md#finding-a-counterparty)), but a stranger from a board is still a stranger. Parano1d mining is currently concentrated enough that an ETH seller should only swap with someone they have a reason to trust (see below).
 2. **Your swap fits inside the launch caps.**
-   On Ethereum mainnet, the app enforces a hard limit of **5 to 2,500 NOID** and at most **0.5 ETH** per swap. Only swap amounts you can afford to lose while the software is young and unaudited.
+   On Ethereum mainnet, the app enforces a hard limit of **5 to 20,000 NOID** and at most **1 ETH** per swap. Only swap amounts you can afford to lose while the software is young and unaudited.
 3. **You have ~1 hour where both computers can stay on and online.**
    A normal swap takes about **50 minutes** from funding to finish. If you are selling ETH (Bob), your computer **must** be online during the ~75-minute claim window after Alice reveals the secret.
 4. **You can run the Parano1d wallet app locally.**
@@ -27,8 +27,8 @@ In every swap, the roles are fixed by which coin you are selling:
 
 | Role | You sell | You receive | Key responsibility |
 |---|---|---|---|
-| **Alice** | **NOID** | **ETH** | Locks first (longer deadline ~6 h 45 min if stopped). Must reveal before the cutoff. |
-| **Bob** | **ETH** | **NOID** | Sends the invitation first. Exposed to Parano1d miner concentration and must stay online to claim NOID within ~75 min after Alice reveals. |
+| **Alice** | **NOID** | **ETH** | Always the NOID side: makes the secret. Locks first (longer deadline ~6 h 45 min if stopped). Must reveal before the cutoff. |
+| **Bob** | **ETH** (today; more coins may come later) | **NOID** | The side with the other coin. Sends the invitation first. Exposed to Parano1d miner concentration and must stay online to claim NOID within ~75 min after Alice reveals. |
 
 {% hint style="info" %}
 **Asymmetric risk:** If you are selling **NOID (Alice)**, you are not exposed to Parano1d majority-miner attacks—your worst case if Bob disappears is waiting ~6 h 45 min for your NOID to unlock. If you are selling **ETH (Bob)**, you carry both the online-claim requirement and the Parano1d miner-concentration risk.
@@ -41,11 +41,12 @@ In every swap, the roles are fixed by which coin you are selling:
 Even though smart contracts remove custody risk, **Parano1d mining is currently concentrated**:
 
 * Readings in late November 2026 showed one producer making about **76% to 82%** of recent Parano1d blocks (the last 2,880 and the last 720). An older reading (2026-11-08) had one address at 45% to 63% of daily blocks over 20 days.
-* While the share is above 65%, the program refuses Bob's approval, so no mainnet swap can complete. NOID sellers should not fund on mainnet in that time.
-* If the NOID seller (Alice) also controls more than 50% of Parano1d's hashrate, she could take Bob's ETH and then stall Bob's NOID claim until the deadline expires—taking both sides. No timeout length can defeat a majority miner.
-* **What the app does:** Before Bob locks ETH, his app reads recent Parano1d block headers (both 24-hour and 6-hour windows):
-  * **Above 35%:** Bob must explicitly acknowledge the measured share in his approval.
-  * **Above 65%:** The app **hard-blocks** new locks—nobody can override it until both windows drop back to 65% or lower.
+* **At that level the risk is likely, not just possible.** If the NOID seller (Alice) is that producer, or controls more than 50% of Parano1d's hashrate in any other way, she can take Bob's ETH and then stall Bob's NOID claim until the deadline expires—taking both sides. No timeout length can defeat a majority miner.
+* **What the app does:** Before Bob locks ETH, his app reads recent Parano1d block headers (both 24-hour and 6-hour windows). It **warns** and does not block:
+  * **Above 35%:** a warning.
+  * **Above 50%:** a loud warning.
+  * **Cannot be read:** shown as "unknown".
+  * In every case Bob must tick that he read it before he approves. The program does not make the risk smaller. **If you are Bob, swap only with someone you have a reason to trust, or do not lock ETH.**
 
 Read the full explanation in [Limits & Risks](../security/limits-and-risks.md).
 

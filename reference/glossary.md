@@ -5,10 +5,10 @@ Plain-English definitions of every term you'll see in No1d Swap and these docs.
 ---
 
 ### Alice
-The person **selling NOID** and **receiving ETH**. Alice generates the swap secret, locks NOID first with the longer deadline (~6 h 45 min if stopped), and reveals the secret on Ethereum to claim Bob's ETH.
+The person **selling NOID** and **receiving ETH**. Alice is always the NOID side and makes the secret. Alice generates the swap secret, locks NOID first with the longer deadline (~6 h 45 min if stopped), and reveals the secret on Ethereum to claim Bob's ETH.
 
 ### Bob
-The person **selling ETH** and **receiving NOID**. Bob creates the invitation first, locks ETH second with the shorter deadline (~2 h 20 min if stopped), reads Alice's revealed secret from Ethereum, and claims NOID before the Parano1d deadline.
+The person **selling ETH** and **receiving NOID**. Bob is the side with the other coin (ETH today; more coins may come later). Bob creates the invitation first, locks ETH second with the shorter deadline (~2 h 20 min if stopped), reads Alice's revealed secret from Ethereum, and claims NOID before the Parano1d deadline.
 
 ### Check Line
 A 16-digit verification code formatted as four groups of four digits (`xxxx xxxx xxxx xxxx`). Both computers derive it independently from the exact swap terms. Alice and Bob compare it over a second channel before approving so neither side can be tricked by a typo or tampered file.
@@ -38,7 +38,7 @@ The smallest unit of NOID: **1 NOID = 1,000,000 μNOID**. Parano1d close fees st
 Parano1d's native hash function over GF(2¹²⁸) that derives a 32-byte Parano1d address from a 32-byte secret `s`. Because `HTLCPoseidonV2` implements Poseidon2b directly on Ethereum, both chains lock on the exact same 32-byte value `A = Addr(s)` without needing an off-chain ZK equivalence proof.
 
 ### Producer Share (Miner Concentration)
-The percentage of recent Parano1d blocks mined by a single address over the last **24 hours (2,880 blocks)** and **6 hours (720 blocks)**. Checked automatically before Bob locks ETH (explicit approval above 35%, hard block above 65%).
+The percentage of recent Parano1d blocks mined by a single address over the last **24 hours (2,880 blocks)** and **6 hours (720 blocks)**. Checked automatically before Bob locks ETH: a warning above 35%, a loud warning above 50%, "unknown" if unreadable. It never blocks.
 
 ### Recovery Code
 The paper backup code displayed on first launch. Combined with a swap's run folder (`runs/<swap-id>/`), it lets you derive the swap passphrase offline and finish or recover a swap directly with `swap-cli` if the desktop app won't start.

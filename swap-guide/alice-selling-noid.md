@@ -10,7 +10,7 @@ Because Parano1d spends coins with zero-knowledge proofs, you always generate th
 
 Make sure you have:
 * The **Parano1d wallet app** open and fully synced on this computer (`127.0.0.1:9601`).
-* Your **NOID** to sell (between **5** and **2,500 NOID** on mainnet; **5** to **20 NOID** on Sepolia), plus a tiny extra amount (~0.01 NOID) for the funding fee.
+* Your **NOID** to sell (between **5** and **20,000 NOID** on mainnet; **5** to **20 NOID** on Sepolia), plus a tiny extra amount (~0.01 NOID) for the funding fee.
 * Your **Ethereum payout address** (must be a standard EOA wallet—**not** a smart-contract wallet).
 * A small amount of **ETH** in your regular wallet to fund the swap key's Ethereum gas for the reveal transaction (~689,000 gas).
 * **Bob online and ready**—pressing **Prepare** starts the ~6-hour Parano1d deadline clock.
@@ -27,7 +27,8 @@ Bob creates the swap first and sends you his invitation.
    * **From a pasted code (v0.1.8 and later):** Paste Bob's `no1dinv1:…` invitation code into the paste box and click **Use code**. The code's checksum catches a damaged paste, not a forged one, so the next step still matters. The box also takes the invitation's JSON text. If the app says the invitation is damaged or too large, nothing is filled in: ask Bob to copy it again, or send the file instead.
 3. **Double-check every auto-filled field:** network (Mainnet vs. Sepolia), NOID amount, ETH amount, and Bob's addresses. Never trust an auto-fill blindly.
 4. Enter **your Ethereum payout address** (where your ETH will be sent) and check the address-history note (*new*, *used before*, or *changed*).
-5. Review the **rate, fees, usual time (~50 min), and worst-case refund time (~6 h 45 min)** displayed on the form.
+5. On mainnet the form also shows a **market reference rate** beside the swap's rate (display only, see [Caps, Fees & Timelines](caps-fees-and-timelines.md)).
+6. Review the **rate, fees, usual time (~50 min), and worst-case refund time (~6 h 45 min)** displayed on the form.
 
 ---
 

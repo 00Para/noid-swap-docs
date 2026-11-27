@@ -26,6 +26,22 @@ Only *after* both sides confirm the check line and approve does anyone deposit c
 | **7. Automated execution** | App funds NOID contract → waits for Bob's final ETH lock → reveals `s` & takes ETH → sweeps leftovers to your payout address. | App checks Alice's final NOID lock + miner share → locks ETH → reads `s` after reveal → claims NOID → sweeps leftovers to your payout address. |
 
 {% hint style="warning" %}
+## Finding a counterparty
+
+There is no matching engine. You can find someone in your own way (a friend, a community chat), or Bob can post his invitation on the project's public offers board.
+
+**Bob's "Post to the offers board" button** (Bob's card, on Sepolia or mainnet, after his invitation exists and until Alice's funding is seen):
+
+* **Opt in.** Nothing is posted unless Bob clicks. A preview first shows exactly what would be published and the program asks him to confirm.
+* **What goes out:** one signed note with the invitation's public fields (the same as the invitation code, no secret) and an optional note of up to 140 characters. It expires after 24 hours.
+* **A fresh posting key per offer.** It is made for that offer only, is not the swap key, and can do nothing except mark that one offer "taken" or "closed". It is kept on Bob's computer beside the swap.
+* **Public relays see your IP address.** The note goes to three public relays and anyone can read it. Nothing secret is sent.
+* **Taken and closed.** "Mark it taken when the swap starts" is ticked by default: the program posts "taken" when Alice's funding is seen. "Withdraw offer" posts "closed". If posting fails, the swap is not touched and the card offers "Try again".
+* **Recent, then stale.** The program sends no heartbeat, so an offer shows as recent and then as stale until it expires or is marked taken or closed. A listed offer is not a promise that Bob is still there.
+* The practice swap shows the button but posts nothing.
+
+Trust still matters: an offer on a board is a stranger. See [Limits & Risks](../security/limits-and-risks.md) before you lock ETH against one.
+
 **Never send your main wallet seed, your recovery code, or `*.swap.json` to anyone.** The only things that ever leave your computer are Bob's public invitation (`no1d-invitation.json` or `no1dinv1:…`) and Alice's public bundle (`alice.bundle.json`), neither of which contains any secret.
 {% endhint %}
 

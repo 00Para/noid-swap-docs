@@ -14,7 +14,7 @@ A hash-time-locked contract on each chain holds the coins. Neither contract has 
 
 | Detail | Mainnet | Sepolia (Testnet) |
 |---|---|---|
-| **Max per swap** | **2,500 NOID** and **0.5 ETH** | **20 NOID** and **0.01 ETH** |
+| **Max per swap** | **20,000 NOID** and **1 ETH** | **20 NOID** and **0.01 ETH** |
 | **Minimum swap** | **5 NOID** | **5 NOID** |
 | **Protocol fee** | **0%** (network fees only) | **0%** (network fees only) |
 | **Typical time** | **~50 minutes** from funding to settled | **~50 minutes** |

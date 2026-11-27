@@ -16,7 +16,7 @@ As Bob, you start the handshake by sending Alice an invitation, lock your ETH *a
 
 Make sure you have:
 * The **Parano1d wallet app** open and fully synced on this computer (`127.0.0.1:9601`).
-* Your **ETH** to sell (up to **0.5 ETH** on mainnet; up to **0.01 ETH** on Sepolia), plus extra ETH to cover the lock transaction (~584,000 gas) and a potential refund (~159,000 gas) if Alice stops.
+* Your **ETH** to sell (up to **1 ETH** on mainnet; up to **0.01 ETH** on Sepolia), plus extra ETH to cover the lock transaction (~584,000 gas) and a potential refund (~159,000 gas) if Alice stops.
 * Your **Parano1d payout address** (`o1...`) where your claimed NOID will be sent.
 * Your **Ethereum payout address** (standard EOA) for sweeping back any leftover ETH gas (or refund).
 * Your computer plugged in with the lid open so it won't sleep mid-swap.
@@ -27,12 +27,14 @@ Make sure you have:
 
 1. Click **New swap** in No1d Swap and choose **Bob (selling ETH)**.
 2. Choose the network (**Ethereum Mainnet** or **Sepolia**).
-3. Enter the agreed **NOID amount** (5–2,500 NOID on mainnet) and **ETH amount** (up to 0.5 ETH on mainnet).
+3. Enter the agreed **NOID amount** (5–20,000 NOID on mainnet) and **ETH amount** (up to 1 ETH on mainnet).
 4. Enter your **Parano1d payout address** and **Ethereum payout address** (check the address-history indicator).
 5. Create the swap—the app generates a fresh per-swap Ethereum key for this swap.
 6. Send the invitation to Alice:
    * **As a file:** Click **Save an invitation for Alice…** to save `no1d-invitation.json` and send it to Alice.
    * **As a copyable code (v0.1.8 and later):** Click **Copy invitation code** (`no1dinv1:…`) and paste it into your chat with Alice.
+
+**Optional: post it to the offers board.** Your card also has **Post to the offers board**. It does nothing until you click it, and a preview shows exactly what would be published. See [Finding a counterparty](overview-and-checklist.md#finding-a-counterparty).
 
 Both formats contain **only public fields** (network, contract, amounts, and your two public addresses)—zero secrets. (Alice's swap copy, `alice.bundle.json`, travels the other way as a file, never as pasted text.)
 
@@ -57,11 +59,14 @@ Before you lock any ETH, No1d Swap reads Parano1d's own block headers across bot
 
 | Largest producer share (24 h or 6 h) | What the app does |
 |---|---|
-| **35% or lower** | Passes normally. |
-| **Between 35% and 65%** | Shows the exact measured percentage inside your approval and asks you to explicitly accept it and confirm you have a reason to trust Alice. |
-| **Above 65%** | **Hard block.** The approval is disabled and cannot be waived. The screen reopens automatically once both windows fall to 65% or lower. |
+| **35% or lower** | No warning. |
+| **Above 35%** | A warning with the exact measured percentage. |
+| **Above 50%** | A loud warning. |
+| **Cannot be read** | Shown as "unknown". |
 
-Review the rate, fees, worst-case refund time (~2 h 20 min), and miner share, type the confirmation amount, tick the boxes, and approve once.
+Since 0.2.0 this screen **warns and never refuses**: you tick that you read it, then you can approve. **The risk is real.** Above half of the blocks, a miner who is Alice can take your ETH and no time window protects you. At the late-November readings (about 76% to 82%) that is likely, not just possible. Lock ETH only against someone you have a reason to trust. (A second Parano1d node that disagrees or cannot be read still stops the lock.)
+
+On mainnet the form and the approval also show a **market reference rate** beside this swap's rate (see [Caps, Fees & Timelines](caps-fees-and-timelines.md)). Review the rate, fees, worst-case refund time (~2 h 20 min), and miner share, type the confirmation amount, tick the boxes, and approve once.
 
 ---
 

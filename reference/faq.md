@@ -42,13 +42,23 @@ No1d Swap is an independent open-source project with no corporate entity and no 
 
 ---
 
-### Why are swaps capped at 0.5 ETH and 2,500 NOID?
+### Why are swaps capped at 1 ETH and 20,000 NOID?
 No1d Swap is young software and has **not** had an independent external audit yet. The hard caps protect early users from putting large balances into unaudited code and reflect current Parano1d mining concentration.
 
 ---
 
-### Why is Bob's approval blocked with a miner-concentration message?
-Before Bob locks ETH, his app reads who mined the last 24 hours and 6 hours of Parano1d blocks. If a single mining address produced **more than 65%** of blocks in either window, No1d Swap hard-blocks new ETH locks until mining decentralizes back to ≤ 65%. See [Limits & Risks](../security/limits-and-risks.md).
+### What is the miner-concentration warning on Bob's approval?
+Before Bob locks ETH, his app reads who mined the last 24 hours and 6 hours of Parano1d blocks. Since 0.2.0 it **warns and never blocks**: a warning above 35%, a loud warning above 50%, "unknown" if the share cannot be read, and Bob ticks that he read it. The risk is real: above half of the blocks, a miner who is Alice can take Bob's ETH and no time window protects him. At the late-November readings (about 76% to 82%) that is likely. Lock ETH only against someone you have a reason to trust. See [Limits & Risks](../security/limits-and-risks.md).
+
+---
+
+### How do I find someone to swap with?
+Bob can press **Post to the offers board** on his card to publish his invitation to the public offers board. It is opt-in and shows a preview first. See [Finding a counterparty](../swap-guide/overview-and-checklist.md#finding-a-counterparty).
+
+---
+
+### What is the market reference rate on the form?
+On mainnet only, the new-swap form and the approval show the swap's rate beside a reference from the site's own snapshot. It is for comparing: it never changes your terms and is hidden when stale or thin. See [Caps, Fees & Timelines](../swap-guide/caps-fees-and-timelines.md).
 
 ---
 
@@ -58,7 +68,7 @@ Before Bob locks ETH, his app reads who mined the last 24 hours and 6 hours of P
 ---
 
 ### Does No1d Swap support USDC, Bitcoin, or an order book?
-Not on mainnet today. The repository contains prototypes for Bitcoin (`btc/`, signet-only), ERC-20 (`HTLCERC20.sol`), and a Nostr offer board (test networks only), all intentionally disabled on mainnet to keep the launch surface minimal and verifiable.
+Not on mainnet today. The repository contains prototypes for Bitcoin (`btc/`, signet-only), ERC-20 (`HTLCERC20.sol`), and the in-program Nostr offer board and its automatic handover (test networks only), all intentionally disabled on mainnet to keep the launch surface minimal and verifiable.
 
 ---
 
