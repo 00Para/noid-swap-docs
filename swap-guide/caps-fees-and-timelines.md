@@ -32,7 +32,7 @@ You pay only blockchain network fees—No1d Swap takes no cut.
 | **ETH Lock** (`newLock`) | Bob | ~583,853 | 700,000 |
 | **ETH Reveal / Claim** (`claim`) | Alice | ~689,324 | 1,000,000 |
 | **ETH Refund** (`refund`, abort path only) | Bob | ~158,608 | 200,000 |
-| **ETH Leftover Sweep** | Alice & Bob | 21,000 | 21,000 |
+| **ETH Leftover Sweep** | Alice & Bob | estimated per sweep (21,000 or more) | estimate + 20 %, at most 300,000 |
 
 * **Default fee cap:** **1 gwei** (configurable before approval; the app never broadcasts above your fee cap).
 * **Stuck transactions:** If mainnet base fee spikes above your cap while a reveal or refund is waiting, the desktop card lets you **re-send at a higher fee cap** without restarting the swap.

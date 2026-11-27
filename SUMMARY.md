@@ -30,6 +30,7 @@
 ## Troubleshooting & Recovery
 
 * ["Something Needs a Look" Playbook](troubleshooting/common-issues.md)
+* [Back Up & Restore a Swap (New in 0.2.0)](troubleshooting/back-up-and-restore.md)
 * [Emergency Recovery & Second-Computer Close](troubleshooting/recovery-and-second-computer.md)
 
 ## Reference

@@ -14,7 +14,7 @@ No1d Swap removes bridges, custodians, and admin keys—but it does **not** remo
 ### 2. Parano1d Majority-Miner Attack (Mining Concentration)
 * **Who is exposed:** Bob (ETH seller) only. Alice is not exposed.
 * **What happens:** If Alice (the NOID seller) also controls **more than 50%** of Parano1d's mining hashrate, she can reveal `s` on Ethereum, collect Bob's ETH, and then censor or reorg Bob's NOID claim until `D` passes—taking both sides. No timeout length protects against a > 50% miner.
-* **Real-world state:** Chain block-header measurements (2026-11-08) showed one mining address producing **45% to 63%** of daily blocks over 20 days (**52.7%** on the last measured day).
+* **Real-world state:** Readings in late November 2026 showed one producer making about **76% to 82%** of recent blocks (the last 2,880 and the last 720). Because that is above 65%, the program refuses Bob's approval and no mainnet swap can complete. Alice's funding is not refused by this screen, so NOID sellers should not fund on mainnet while it holds. Older history: on 2026-11-08 one address was at 45% to 63% of daily blocks over 20 days.
 * **What Bob's app checks:** Before Bob locks ETH, his app reads recent Parano1d block headers across the last **24 hours (2,880 blocks)** and **6 hours (720 blocks)**:
   * **35%–65% in either window:** Bob is shown the exact measured percentage and must explicitly accept it in his approval.
   * **Above 65% in either window:** Hard block. Nobody can waive it; the approval screen reopens automatically once both windows fall back to ≤ 65%.

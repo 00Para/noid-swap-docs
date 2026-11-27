@@ -14,6 +14,7 @@ Find the message you see below and follow the exact steps.
 * Nothing is broken and no coins were locked.
 * This hard block **cannot be overridden**.
 * Wait until block production spreads out and both windows drop back to **65% or lower**—the approval screen reopens automatically.
+* While this holds, no mainnet swap can complete. The screen refuses only **Bob's** approval: Alice can still prepare and fund. **If you are selling NOID, do not fund on mainnet** until Bob's program says it would lock; funded NOID stays locked about 6 h 45 min before it comes back, less the fees.
 
 ---
 
@@ -76,8 +77,11 @@ Find the message you see below and follow the exact steps.
 **What happened:** The main swap settled, or aborted cleanly, and one side's leftover sweep (e.g., NOID dust or remaining ETH gas) hasn't gone out yet.
 
 **What to do:**
-* If the swap wallet had no coin larger than the sweep fee (~0.0058 NOID or 21,000 gas), there may simply be nothing worth sweeping left—the app retries on a 5-minute timer while letting the other chain's sweep finish immediately.
+* If the swap wallet had no coin larger than the sweep fee (~0.0058 NOID, or the Ethereum sweep's gas), there may simply be nothing worth sweeping left—the app retries on a 5-minute timer while letting the other chain's sweep finish immediately.
 * Check the balances under **Details**. Once the main payout arrived in your own address, your swap coins are safe.
+* The Ethereum sweep estimates its gas, adds 20 % and caps it at 300,000, instead of using a fixed 21,000. A sweep to a never-used address needs more than 21,000, which is why a fixed limit ran out of gas.
+
+**A send that was mined and failed:** if an Ethereum transaction is mined with status 0, the card says **"nothing moved, only the fee was spent"**. A failed leftover ETH sweep is built again once, after 5 minutes, with a fresh gas estimate; other failed sends stop for you to check. A reveal is never judged this way, because a reverted reveal can still have made the secret public.
 
 ---
 

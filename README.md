@@ -2,7 +2,7 @@
 
 **No1d Swap** is a desktop app for Windows and macOS that lets two people swap **NOID** (Parano1d) for **ETH** (Ethereum) directly—with no bridge, no wrapped token, no liquidity pool, and no middleman.
 
-A hash-time-locked contract on each chain holds the coins. Neither contract has an owner, an admin key, a pause button, or a protocol fee. Either both people receive what they agreed on, or both get their own coins back automatically once the deadlines pass.
+A hash-time-locked contract on each chain holds the coins. Neither contract has an owner, an admin key, a pause button, or a protocol fee. Either both people receive what they agreed on, or both get their own coins back once the deadlines pass.
 
 {% hint style="warning" %}
 **Read before swapping real funds:** No1d Swap is early software built for **two people who have a reason to trust each other**, and for **small amounts only**. Start with [Is No1d Swap Right for You Today?](before-you-start/is-this-right-for-you.md) and [Limits & Risks](security/limits-and-risks.md).
@@ -61,7 +61,7 @@ Never trust contract addresses or installer hashes from screenshots or chat mess
 
 ## Support the Project (Voluntary Donations)
 
-No1d Swap charges **0% protocol fees**. If you find it useful and want to support ongoing development and an independent external security audit, voluntary **NOID** donations are welcome:
+No1d Swap charges **0% protocol fees**. If you find it useful and want to support ongoing development, voluntary **NOID** donations are welcome:
 
 ```text
 o1epu2t45yg2a87xfvtzd3yuha8vejj9k4s762n89dwun3cp67k7nqkt2ued

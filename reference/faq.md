@@ -8,7 +8,7 @@ Bridges and pools introduce custodial multisigs, smart-contract liquidity honeyp
 ### Is there a fee to use No1d Swap?
 **No.** The project takes **0%**. You pay only standard Ethereum gas and Parano1d network transaction fees.
 
-If you'd like to support development and an external security audit voluntarily, NOID donations go to `o1epu2t45yg2a87xfvtzd3yuha8vejj9k4s762n89dwun3cp67k7nqkt2ued`.
+If you'd like to support development voluntarily, NOID donations go to `o1epu2t45yg2a87xfvtzd3yuha8vejj9k4s762n89dwun3cp67k7nqkt2ued`.
 
 ---
 
@@ -63,4 +63,4 @@ Not on mainnet today. The repository contains prototypes for Bitcoin (`btc/`, si
 ---
 
 ### What if I lose my computer—can my recovery code restore everything by itself?
-Your paper recovery code unlocks your swap files **when combined with your swap's run folder** (`runs/<swap-id>/`). It is not a BIP-39 seed phrase that scans the blockchain—keep your paper recovery code safe *and* back up any active run folder if you have funds currently locked.
+Your paper recovery code unlocks your swap files **when combined with your swap's run folder** (`runs/<swap-id>/`). It is not a BIP-39 seed phrase that scans the blockchain—keep your paper recovery code safe *and* back up any active run folder if you have funds currently locked. Version 0.2.0 adds a sealed backup file per swap and a **Restore a swap…** menu item: see [Back Up & Restore a Swap](../troubleshooting/back-up-and-restore.md).

@@ -40,7 +40,8 @@ In every swap, the roles are fixed by which coin you are selling:
 
 Even though smart contracts remove custody risk, **Parano1d mining is currently concentrated**:
 
-* Measurements from chain block headers (2026-11-08) showed a single mining address producing **45% to 63%** of daily blocks over 20 days.
+* Readings in late November 2026 showed one producer making about **76% to 82%** of recent Parano1d blocks (the last 2,880 and the last 720). An older reading (2026-11-08) had one address at 45% to 63% of daily blocks over 20 days.
+* While the share is above 65%, the program refuses Bob's approval, so no mainnet swap can complete. NOID sellers should not fund on mainnet in that time.
 * If the NOID seller (Alice) also controls more than 50% of Parano1d's hashrate, she could take Bob's ETH and then stall Bob's NOID claim until the deadline expires—taking both sides. No timeout length can defeat a majority miner.
 * **What the app does:** Before Bob locks ETH, his app reads recent Parano1d block headers (both 24-hour and 6-hour windows):
   * **Above 35%:** Bob must explicitly acknowledge the measured share in his approval.

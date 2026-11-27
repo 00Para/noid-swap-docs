@@ -54,6 +54,16 @@ If the check lines don't match **digit for digit**, stop and do not approve or d
 
 ---
 
+## Reading the Clock Line on the Swap Card
+
+While a swap is in flight under an active approval, one line under the card's status sentence shows three things:
+
+* **The deadline that matters now:** when your refund opens, when a reveal must start, how long Alice can reveal, or when Bob's claim must be in a block, with a clock time and the time or blocks left.
+* **A status chip:** **On track** (normal progress), **Refund path** (the swap is on its refund or recovery path, or the reveal window has passed) or **Under 30 minutes** (30 minutes or less left on your own reveal or claim deadline).
+* **Keep it open:** **"Waiting on the chains · keep the program open"**, or **"Sending now · do not close the program"** while a transaction is being sent. The card never says the program may be closed. The keep-open part shows only while your approval is in force.
+
+---
+
 ## Detailed Role Guides
 
 * **Selling NOID?** Follow the [Guide for Alice (Selling NOID)](alice-selling-noid.md).

@@ -61,11 +61,7 @@ shasum -a 256 ~/Downloads/No1d-Swap-*-mac-arm64.dmg
 cat ~/Downloads/release.json
 ```
 
-4. *(Optional extra check)* **Verify GitHub build provenance:**
-
-```sh
-gh attestation verify ~/Downloads/No1d-Swap-*-mac-arm64.dmg --repo 00Para/noid-swap
-```
+4. **No provenance statement for the Mac download.** The Mac disk image is built by hand and has no GitHub build provenance, so there is no `gh attestation` check for it. It is checked by its SHA-256 against `release.json` (whose signature you verified above) and against `SHA256SUMS.txt` only.
 {% endtab %}
 
 {% tab title="Windows (PowerShell)" %}
